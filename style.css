@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --dark-color: #212529;
+    --secondary-color: #3b3b3b;
+    --font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+    min-height: 100vh;
+
+}
+
+body {
+    background: var(--dark-color);
+    font-family: var(--font-family);
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: white;
+}
+
+.list-table th {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-item {
+    margin: 10px;
+    padding: 15px;
+    white-space: nowrap;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.menu-item-active, .menu-item:hover {
+    background: var(--secondary-color);
+}
+
+.page {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-out;
+}
+
+.logo {
+    width: 200px;
+    max-width: 95vw;
+}
+
+.about, .contact {
+    width: 95vw;
+    max-width: 600px;
+    text-align: justify;
+}
+
+.projects {
+    max-width: 95vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project {
+    display: block;
+    max-width: 250px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.project:hover {
+    background: var(--secondary-color);
+}
+
+.project-image {
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+.project-title {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}

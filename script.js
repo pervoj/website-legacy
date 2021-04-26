@@ -10,16 +10,17 @@ var page_about = document.getElementById('page-about');
 var page_contact = document.getElementById('page-contact');
 var page_projects = document.getElementById('page-projects');
 
-page_home.style.maxHeight = page_home.scrollHeight + 'px';
+window.addEventListener('hashchange', togglePages);
 
-menu_home.addEventListener('click', function () { togglePages('home'); });
-menu_about.addEventListener('click', function () { togglePages('about'); });
-menu_contact.addEventListener('click', function () { togglePages('contact'); });
-menu_projects.addEventListener('click', function () { togglePages('projects'); });
+if (window.location.hash) {
+    togglePages();
+} else {
+    page_home.style.maxHeight = page_home.scrollHeight + 'px';
+}
 
-function togglePages (page) {
-    switch (page) {
-        case 'home':
+function togglePages() {
+    switch (window.location.hash) {
+        case '#home':
             page_home.style.maxHeight = page_home.scrollHeight + 'px';
             page_about.style.maxHeight = null;
             page_contact.style.maxHeight = null;
@@ -29,7 +30,7 @@ function togglePages (page) {
             menu_contact.classList.remove('menu-item-active');
             menu_projects.classList.remove('menu-item-active');
             break;
-        case 'about':
+        case '#about':
             page_home.style.maxHeight = null;
             page_about.style.maxHeight = page_about.scrollHeight + 'px';
             page_contact.style.maxHeight = null;
@@ -39,7 +40,7 @@ function togglePages (page) {
             menu_contact.classList.remove('menu-item-active');
             menu_projects.classList.remove('menu-item-active');
             break;
-        case 'contact':
+        case '#contact':
             page_home.style.maxHeight = null;
             page_about.style.maxHeight = null;
             page_contact.style.maxHeight = page_contact.scrollHeight + 'px';
@@ -49,7 +50,7 @@ function togglePages (page) {
             menu_contact.classList.add('menu-item-active');
             menu_projects.classList.remove('menu-item-active');
             break;
-        case 'projects':
+        case '#projects':
             page_home.style.maxHeight = null;
             page_about.style.maxHeight = null;
             page_contact.style.maxHeight = null;

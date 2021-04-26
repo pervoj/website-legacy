@@ -58,7 +58,6 @@ a {
     padding: 15px;
     white-space: nowrap;
     border-radius: 5px;
-    cursor: pointer;
     text-decoration: none;
     transition: all .2s ease-in-out;
 }

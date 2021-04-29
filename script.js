@@ -1,3 +1,22 @@
+// Localise:
+
+var langs = ['cs']; // All supported languages except the default
+
+if (langs.includes(navigator.language)) {
+    loadLang(navigator.language);
+}
+
+function loadLang(lang) {
+    var locales = JSON.parse(readFile('locales/' + lang + '.json'));
+    var elements = document.getElementsByClassName('translate');
+
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = locales[elements[i].innerHTML];
+    }
+}
+
+
+
 // Page toggling:
 
 var menu_home = document.getElementById('menu-home');
@@ -15,7 +34,7 @@ window.addEventListener('hashchange', togglePages);
 if (window.location.hash) {
     togglePages();
 } else {
-    page_home.style.maxHeight = page_home.scrollHeight + 'px';
+    window.location.hash = '#home';
 }
 
 function togglePages() {
@@ -72,4 +91,19 @@ var current_year = new Date().getFullYear();
 
 if (copyright_year != current_year) {
     document.getElementById('copyright-year').innerText = copyright_year + ' – ' + current_year;
+}
+
+
+
+// Other functions:
+
+function readFile(filePath) {
+    var result = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open('GET', filePath, false);
+    xmlhttp.send();
+    if (xmlhttp.status==200) {
+        result = xmlhttp.responseText;
+    }
+    return result;
 }

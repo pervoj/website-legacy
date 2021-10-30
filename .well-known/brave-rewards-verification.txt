@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: pervoj.cz
-Token: 9fe12ce54f3c47e1a7242eb69565b3681da9772f0b18194064eae3455ebcf19e

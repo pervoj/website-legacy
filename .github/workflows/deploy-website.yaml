@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+<<<<<<< HEAD
       - name: Download Zola
         run: wget https://github.com/getzola/zola/releases/download/v0.15.3/zola-v0.15.3-x86_64-unknown-linux-gnu.tar.gz
       - name: Unzip Zola
@@ -21,3 +22,10 @@ jobs:
           BRANCH: gh-pages
           FOLDER: public
           CLEAN: true
+=======
+      - name: build_and_deploy
+        uses: shalzz/zola-deploy-action@v0.14.1
+        env:
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> c2616e1c0c157f3caefa9cc46543e3d8e898772e

@@ -1,0 +1,29 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<main id="main-content" class="container">
+
+	{%- set image = page.extra.image | default(value = 'images/post-no-image.svg') -%}
+	{%- set imagePath = image | replace(from="static/", to="") -%}
+	{%- set imageUrl = get_url(path = imagePath) -%}
+	<section class="blog-post-header" style="--image: url('{{ imageUrl }}')">
+		<div class="blog-title">
+			<h1>{{ page.title }}</h1>
+			<time datetime="{{ page.date }}">
+				{{ page.date | date(format = l10n::get(key = 'date')) }}
+			</time>
+		</div>
+	</section>
+
+	<article>
+		{{ page.content | safe }}
+	</article>
+
+</main>
+
+<footer class="footer">
+	{% include "partials/footer-content.html" %}
+</footer>
+
+{% endblock %}

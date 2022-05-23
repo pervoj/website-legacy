@@ -1,0 +1,32 @@
+{% import "l10n.html" as l10n %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="{{ l10n::get(key = 'hp_title') }}">
+	<meta name="author" content="Vojtěch Perník">
+	<meta name="keywords" content="Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development">
+
+	<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}">
+	<link rel="icon" href="{{ get_url(path='images/icon.svg') }}">
+	<link rel="stylesheet" href="https://pervoj.cz/nuclear/nuclear.css">
+	<link rel="stylesheet" href="{{ get_url(path='styles.css') }}">
+
+	<script src="https://pervoj.cz/nuclear/nuclear.js" defer></script>
+	<script src="https://cdn.skypack.dev/@hotwired/turbo" type="module" defer></script>
+	<script src="{{ get_url(path='language.js') }}"></script>
+
+	{% block head %}{% endblock %}
+</head>
+<body>
+	<a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+	{% include "partials/navbar.html" %}
+
+	{% block content %}{% endblock %}
+</body>
+</html>

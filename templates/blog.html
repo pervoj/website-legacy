@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block head %}<title>{{ section.title }} – pervoj</title>{% endblock %}
+
+
+{% block content %}
+
+<main id="main-content" class="container">
+
+	<section>
+		{{ section.content | safe }}
+	</section>
+
+	<section>
+		<h2>{{ l10n::get(key = 'blog_posts') }}</h2>
+		<div class="blog-list">
+			{% for post in section.pages %}
+				{%- set image = post.extra.image | default(value = 'images/post-no-image.svg') -%}
+				{%- set imagePath = image | replace(from="static/", to="") -%}
+				{%- set imageUrl = get_url(path = imagePath) -%}
+				<article class="blog-list-post" style="--image: url('{{ imageUrl }}')">
+					<div class="blog-title">
+						<h3 class="strong">{{ post.title }}</h3>
+						<time datetime="{{ post.date }}">
+							{{ post.date | date(format = l10n::get(key = 'date')) }}
+						</time>
+					</div>
+					<a href="{{ post.permalink }}" aria-label="{{ post.title }}"></a>
+				</article>
+			{% endfor %}
+		</div>
+	</section>
+
+</main>
+
+<footer class="footer">
+	{% include "partials/footer-content.html" %}
+</footer>
+
+{% endblock %}

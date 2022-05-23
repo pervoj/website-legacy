@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}<title>pervoj</title>{% endblock %}
+
+
+{% block content %}
+
+<main id="main-content" class="container hp-content">
+	<section class="hp-text">
+		<h1>{{ l10n::get(key = 'hp_title') }}</h1>
+		<p>{{ l10n::get(key = 'hp_description') }}</p>
+		<p><a href="/contact" class="btn accent-primary"><i class="fa-solid fa-handshake"></i>&ensp;{{ l10n::get(key = 'nav_hire') }}</a></p>
+		<footer class="footer hp-footer-inner">
+			{% include "partials/footer-content.html" %}
+		</footer>
+	</section>
+	<section class="hp-image">
+		<img src="{{ get_url(path='images/shape.svg') }}" alt="{{ l10n::get(key = 'hp_shape_alt') }}">
+		<img src="{{ get_url(path='images/photo.webp') }}" alt="{{ l10n::get(key = 'hp_photo_alt') }}">
+	</section>
+</main>
+
+<footer class="footer hp-footer-outer">
+	{% include "partials/footer-content.html" %}
+</footer>
+
+{% endblock %}

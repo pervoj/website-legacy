@@ -1,0 +1,24 @@
+<nav class="navbar">
+	<a href="{{ l10n::url(path = '') }}" class="logo" aria-label="pervoj"></a>
+
+	<ul class="links">
+		<li class="space"></li>
+		<li><a href="{{ l10n::url(path = '') }}"><i class="fa-solid fa-house"></i>&ensp;{{ l10n::get(key = 'nav_home') }}</a></li>
+		<li><a href="{{ l10n::url(path = 'contact') }}"><i class="fa-solid fa-address-book"></i>&ensp;{{ l10n::get(key = 'nav_contact') }}</a></li>
+		<li><a href="{{ l10n::url(path = 'blog') }}"><i class="fa-solid fa-blog"></i>&ensp;{{ l10n::get(key = 'nav_blog') }}</a></li>
+		<li><a href="#"><i class="fa-solid fa-globe"></i>&ensp;{{ l10n::get(key = 'nav_wiki') }}</a></li>
+		<li class="space"></li>
+		<li class="btns">
+			<a href="{{ l10n::url(path = 'support') }}" class="btn outline accent-light">
+				<i class="fa-solid fa-heart"></i>&ensp;{{ l10n::get(key = 'nav_support') }}
+			</a>
+			<a href="{{ l10n::url(path = 'contact') }}" class="btn accent-primary">
+				<i class="fa-solid fa-handshake"></i>&ensp;{{ l10n::get(key = 'nav_hire') }}
+			</a>
+		</li>
+	</ul>
+
+	<button class="toggler borderless empty" aria-label="{{ l10n::get(key = 'nav_toggle') }}">
+		<span class="hamburger"></span>
+	</button>
+</nav>

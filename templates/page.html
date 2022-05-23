@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block head %}<title>{{ page.title }} – pervoj</title>{% endblock %}
+
+
+{% block content %}
+
+<main id="main-content" class="container">
+	{{ page.content | safe }}
+</main>
+
+<footer class="footer">
+	{% include "partials/footer-content.html" %}
+</footer>
+
+{% endblock %}

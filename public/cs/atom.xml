@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="cs">
+	<title></title>
+	<subtitle>osobní stránka Vojtěcha Perníka</subtitle>
+	<link href="https://pervoj.cz/cs/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://pervoj.cz"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-04-20T00:00:00+00:00</updated>
+	<id>https://pervoj.cz/cs/atom.xml</id>
+	<entry xml:lang="cs">
+		<title>Zcelá nová CSS knihovna</title>
+		<published>2022-04-20T00:00:00+00:00</published>
+		<updated>2022-04-20T00:00:00+00:00</updated>
+		<link href="https://pervoj.cz/cs/blog/new-nuclear-library/" type="text/html"/>
+		<id>https://pervoj.cz/cs/blog/new-nuclear-library/</id>
+		<content type="html">&lt;p&gt;V posledních měsících jsem spustil hned 2 zcela nové stránky a chystám se spustit 3. Protože chci, aby všechny mé stránky vypadaly stejně, musím pořád dokola opisovat stejné HTML a CSS. To dělá údržbu stránek hodně složitou. Když uděláte malou změnu v designu jedné stránky, musíte stejnou změnu udělat i v těch ostatních. To mě přimělo oddělit designovou knihovnu do samostatného projektu.&lt;&#x2F;p&gt;
+&lt;p&gt;Tak přesně vznikl &lt;strong&gt;Nuclear&lt;&#x2F;strong&gt;. Knihovnou Nuclear jsem vytvořil základní stavební kámen pro všechny mé budoucí stránky. Je vytvořený v SCSS se špetkou JS a má zabudované Font Awesome 6 Free.&lt;&#x2F;p&gt;
+&lt;p&gt;Nuclear je vytvořený pro zjednodušení tvorby mých stránek a je postavený na mém značkovém designu, není připravený na používání v jiných projektech. Pokud však chcete Nuclear použít, můžete vytvořit fork &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;pervoj&#x2F;nuclear&quot;&gt;repozitáře na GitHubu&lt;&#x2F;a&gt; a upravit si Nuclear podle sebe. Pokud chcete Nuclear jenom vyzkoušet, přidejte těchto pár řádků do hlavičky vaší stránky:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; class=&quot;language-html z-code&quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;z-text z-html z-basic&quot;&gt;&lt;span class=&quot;z-meta z-tag z-inline z-any z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-tag z-begin z-html&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-tag z-inline z-any z-html&quot;&gt;link&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;span class=&quot;z-entity z-other z-attribute-name z-html&quot;&gt;rel&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-html&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;stylesheet&lt;span class=&quot;z-punctuation z-definition z-string z-end z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;span class=&quot;z-entity z-other z-attribute-name z-html&quot;&gt;href&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-html&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;https:&#x2F;&#x2F;pervoj.cz&#x2F;nuclear&#x2F;css&#x2F;nuclear.css&lt;span class=&quot;z-punctuation z-definition z-string z-end z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-tag z-end z-html&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-tag z-script z-begin z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-tag z-begin z-html&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-tag z-script z-html&quot;&gt;script&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-script z-begin z-html&quot;&gt; &lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;span class=&quot;z-entity z-other z-attribute-name z-html&quot;&gt;src&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-html&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;https:&#x2F;&#x2F;pervoj.cz&#x2F;nuclear&#x2F;js&#x2F;nuclear.js&lt;span class=&quot;z-punctuation z-definition z-string z-end z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;span class=&quot;z-entity z-other z-attribute-name z-html&quot;&gt;type&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-script z-begin z-html&quot;&gt;&lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-html&quot;&gt;=&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-script z-begin z-html&quot;&gt;&lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-script z-begin z-html&quot;&gt;&lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;module&lt;span class=&quot;z-punctuation z-definition z-string z-end z-html&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-attribute-with-value z-html&quot;&gt;&lt;span class=&quot;z-entity z-other z-attribute-name z-html&quot;&gt;defer&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-tag z-end z-html&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-script z-end z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-tag z-begin z-html&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-tag z-script z-html&quot;&gt;script&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-tag z-end z-html&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;A poté přidejte třídy podle návodu na &lt;a href=&quot;https:&#x2F;&#x2F;pervoj.cz&#x2F;nuclear&#x2F;&quot;&gt;webové stránce projektu&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;V budoucnosti také plánuji:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Předělat všechny své stránky tak, aby Nuclear využívaly.&lt;&#x2F;li&gt;
+&lt;li&gt;Implementovat do Nuclearu velký lokalizační systém.&lt;&#x2F;li&gt;
+&lt;li&gt;Přidat do Nuclearu systém komentářů.&lt;&#x2F;li&gt;
+&lt;li&gt;Přidat další funkce a vylepšení.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="cs">
+		<title>Nová wiki byla spuštěna!</title>
+		<published>2022-04-02T00:00:00+00:00</published>
+		<updated>2022-04-02T00:00:00+00:00</updated>
+		<link href="https://pervoj.cz/cs/blog/wiki-was-started/" type="text/html"/>
+		<id>https://pervoj.cz/cs/blog/wiki-was-started/</id>
+		<content type="html">&lt;p&gt;Po nějakém čase příprav je wiki konečně hotová! Jak jsem slíbil v jednom z [předchozích příspěvků]({% include link.html post=&amp;quot;2022&#x2F;02&#x2F;04&#x2F;blog-was-started&amp;quot; %}), wiki je postavena na Jekyllu a používá stejné téma jako tento blog. V tomto příspěvku bych chtěl popsat, proč jsem se pro spuštění wiki rozhodl a co tam bude možné najít.&lt;&#x2F;p&gt;
+&lt;p&gt;Když jsem [přešel na Linux]({% include link.html post=&amp;quot;2022&#x2F;02&#x2F;15&#x2F;my-story-programming-linux&amp;quot; %}), bylo pro mě opravdu těžké najít nějaké návody. Ano, po internetu je návodů opravdu spousta. Ale to je přesně ten problém. Návodů totiž existuje až moc, mnoho z nich je už zastaralých a neexistuje žádná stránka, kde by se daly najít všechny návody na jednom místě. Musíte procházet všechny existující návody a zkoušet, jestli fungují. A to je opravdu otravné.&lt;&#x2F;p&gt;
+&lt;p&gt;To je důvod, proč jsem se rozhodl wiki spustit. Chystám se tam psát např. návody pro Linuxové a programátorské začátečníky. Vše bude na jednom a tom stejném místě. Také tam plánuji psát nějaké dokumentace k mým projektům a spoustu dalších věcí.&lt;&#x2F;p&gt;
+&lt;p&gt;Wiki můžete navštívit na této adrese: &lt;a href=&quot;https:&#x2F;&#x2F;pervoj.cz&#x2F;wiki&quot;&gt;https:&#x2F;&#x2F;pervoj.cz&#x2F;wiki&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="cs">
+		<title>Jak jsem se dostal k programování a Linuxu</title>
+		<published>2022-02-15T00:00:00+00:00</published>
+		<updated>2022-02-15T00:00:00+00:00</updated>
+		<link href="https://pervoj.cz/cs/blog/my-story-programming-linux/" type="text/html"/>
+		<id>https://pervoj.cz/cs/blog/my-story-programming-linux/</id>
+		<content type="html">&lt;h1 id=&quot;2014-a-2015&quot;&gt;2014 a 2015&lt;&#x2F;h1&gt;
+&lt;p&gt;Můj taťka je programátor a já jsem jím vždy chtěl být také. Nebyl jsem ale trpělivý. Chtěl jsem být programátorem hned teď bez jakékoli práce. V roce 2014 jsem se tedy začal učit Javu z české stránky ITnetwork.cz. Jak už jsem řekl, nebyl jsem trpělivý. Jediné, co jsem dělal, bylo kopírování kusů kódu z kurzu a pokoušení se výtvor zkompilovat úplně bez přemýšlení či čtení textů v kurzu. Jak určitě tušíte, moc to nefungovalo. Tímto způsobem jsem došel až nakonec kurzu. Po dočtení jsem samozřejmě neuměl vůbec nic.&lt;&#x2F;p&gt;
+&lt;p&gt;Rok 2015 ale všechno změnil. Ke svým 9. narozeninám jsem totiž dostal knihu o Scratchi a opravdu mě to zaujalo. Od té doby jsem ve Scratchi programoval skoro každý den. Skončil jsem, až když jsem se začal učit na přijímací zkoušky na gymnázium. Potom na gymnáziu jsem dlouhou dobu neprogramoval. Akorát jsem se učil HTML a CSS&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;velky-rok-2020&quot;&gt;Velký rok 2020&lt;&#x2F;h1&gt;
+&lt;p&gt;Rok 2020 byl skvělý. V tomto pandemií poznamenaném roce se toho stalo opravdu hodně. Na zažátku roku jsem kvůli nemoci nešel do školy a doma jsem se nudil. Řekl jsem si tedy, že bych mohl programování dát druhou šanci a začal jsem se Javu učit znovu. Celý kurz jsem poctivě přečetl a vše mi zázračně fungovalo. Byl jsem opravdu šťastný a motivovalo mě to tak moc, že jsem se ten rok toho naučil opravdu hodně a dokonce přešel na Linux.&lt;&#x2F;p&gt;
+&lt;p&gt;Na jaře, když jsem zrovna něco četl na internetu, jsem se dočetl o Linuxu. Taťka mi o něm řekl víc &lt;em&gt;(stále je na Windows, ale v práci používá Linuxový server)&lt;&#x2F;em&gt; a já byl vážně nadšený. Začal jsem hledat další materiály a postupně zjišťovat, jak nainstalovat Linux Mint.&lt;&#x2F;p&gt;
+&lt;p&gt;V září jsem byl konečně připravený a rozhodl jsem se zahodit Windows a přejít na Mint. S Mintem jsem vydržel skoro rok. V květnu 2021 jsem ho totiž vyměnil za Fedoru. Ale to trochu předbíhám.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;dalsi-skvely-rok-2021&quot;&gt;Další skvělý rok 2021&lt;&#x2F;h1&gt;
+&lt;p&gt;Postupně mě začínaly zajímat GTK aplikace a chtěl jsem se dozvědět, jak jsou vytvořené. Protože jediným jazykem, který jsem v té době znal, byla Java, hledal jsem, jak používat GTK právě v tomto jazyce. Ale narazil jsem na něco zajímavějšího, jazyk Vala.&lt;&#x2F;p&gt;
+&lt;p&gt;Vala měla syntaxi podobnou Javě, takže jsem se ji začal učit a postupně jsem se do ní dostával. GTK jsem začal milovat. Kvůli němu jsem se také rozhodl přejít na GNOME.&lt;&#x2F;p&gt;
+&lt;p&gt;Ubuntu jsem kvůli jeho modifikacím nechtěl. Chtěl jsem čisté GNOME. Uměl jsem s APTem, takže jsem hledal nějakou distribuci s GNOME založenou na Debianu a narazil jsem na Pop!_OS. Bohužel ještě před tím, než jsem měl možnost na něj přejít, jeho vývojáři oznámili, že GNOME vymění za své vlastní DE zvané Cosmic.&lt;&#x2F;p&gt;
+&lt;p&gt;V květnu jsem se tedy rozhodl přejít na Fedoru. Ta sice není postavená na APTu, ale řekl jsem si, že se aspoň přiučím něco nového. Na Fedoře jsem se také začal učit JavaScript a Python.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zacatek-roku-2022&quot;&gt;Začátek roku 2022&lt;&#x2F;h1&gt;
+&lt;p&gt;Na konci ledna jsem se rozhodl přejít na Arch Linux. Zaujal mě totiž jejich systém rolling release a vize &amp;quot;udělej si sám&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;Takže tento článek píšu z Arch Linuxu s GNOME 41.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="cs">
+		<title>Blog byl spuštěn!</title>
+		<published>2022-02-04T00:00:00+00:00</published>
+		<updated>2022-02-04T00:00:00+00:00</updated>
+		<link href="https://pervoj.cz/cs/blog/blog-was-started/" type="text/html"/>
+		<id>https://pervoj.cz/cs/blog/blog-was-started/</id>
+		<content type="html">&lt;p&gt;Ahoj! Jmenuji se &lt;strong&gt;Vojtěch Perník&lt;&#x2F;strong&gt; a pocházím z Českých Budějovic. Když jsem psal tento tento článek, bylo mi 15 let. Rád používám přezdívku &lt;strong&gt;pervoj&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Ale tohle všechno si můžete přečíst na domovské stránce webu. Takže nyní něco k blogu.&lt;&#x2F;p&gt;
+&lt;p&gt;Tento blog jsem se rozhodl vytvořit, abych mohl psát o tom, co se děje v mých projektech, a taky prostě o věcech, o kterých si myslím, že stojí za to psát.&lt;&#x2F;p&gt;
+&lt;p&gt;Celý blog je postavený na projektu &lt;a href=&quot;https:&#x2F;&#x2F;jekyllrb.com&#x2F;&quot;&gt;Jekyll&lt;&#x2F;a&gt; a používá mé vlastní téma. V nejbližší době se na Jekyllu chystám spustit také mojí vlastní wiki a předělat domovskou stránku.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;ukazka-designu-stranky&quot;&gt;Ukázka designu stránky&lt;&#x2F;h1&gt;
+&lt;p&gt;Používám stejný ukázkový text, jako používá GitHub v demonstracích jejich
+témat.&lt;&#x2F;p&gt;
+&lt;p&gt;Text can be &lt;strong&gt;bold&lt;&#x2F;strong&gt;, &lt;em&gt;italic&lt;&#x2F;em&gt;, or &lt;del&gt;strikethrough&lt;&#x2F;del&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pervoj.cz&#x2F;cs&#x2F;blog&#x2F;blog-was-started&#x2F;#&quot;&gt;Link to another page&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There should be whitespace between paragraphs.&lt;&#x2F;p&gt;
+&lt;p&gt;There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;header-1&quot;&gt;Header 1&lt;&#x2F;h1&gt;
+&lt;p&gt;This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote following a header.&lt;&#x2F;p&gt;
+&lt;p&gt;When something is important enough, you do it even if the odds are not in your favor.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;header-3&quot;&gt;Header 3&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;js&quot; class=&quot;language-js z-code&quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-ts&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt; Javascript code with syntax highlighting.&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-var z-expr z-ts&quot;&gt;&lt;span class=&quot;z-storage z-type z-ts&quot;&gt;var&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-var-single-variable z-expr z-ts&quot;&gt;&lt;span class=&quot;z-meta z-definition z-variable z-ts&quot;&gt;&lt;span class=&quot;z-entity z-name z-function z-ts&quot;&gt;fun&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-ts&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function z-expression z-ts&quot;&gt;&lt;span class=&quot;z-storage z-type z-function z-ts&quot;&gt;function&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-definition z-function z-ts&quot;&gt;&lt;span class=&quot;z-entity z-name z-function z-ts&quot;&gt;lang&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-parameters z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameters z-begin z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter z-ts&quot;&gt;l&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-parameters z-end z-ts&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-block z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-block z-ts&quot;&gt;{&lt;&#x2F;span&gt;
+  &lt;span class=&quot;z-variable z-other z-object z-ts&quot;&gt;dateformat&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-property z-ts&quot;&gt;i18n&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-ts&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function-call z-ts&quot;&gt;&lt;span class=&quot;z-support z-function z-ts&quot;&gt;require&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-single z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ts&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;.&#x2F;lang&#x2F;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ts&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-arithmetic z-ts&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-other z-readwrite z-ts&quot;&gt;l&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;)&lt;&#x2F;span&gt;
+  &lt;span class=&quot;z-keyword z-control z-flow z-ts&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;z-constant z-language z-boolean z-true z-ts&quot;&gt;true&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-statement z-ts&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-punctuation z-definition z-block z-ts&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;ruby&quot; class=&quot;language-ruby z-code&quot;&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;z-source z-ruby&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-ruby&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-ruby&quot;&gt;#&lt;&#x2F;span&gt; Ruby code with syntax highlighting
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-class z-ruby&quot;&gt;GitHubPages&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-double-colon z-ruby&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-class z-ruby&quot;&gt;Dependencies&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-dot z-ruby&quot;&gt;.&lt;&#x2F;span&gt;gems&lt;span class=&quot;z-punctuation z-accessor z-dot z-ruby&quot;&gt;.&lt;&#x2F;span&gt;each &lt;span class=&quot;z-keyword z-control z-start-block z-ruby&quot;&gt;do&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-block z-parameters z-ruby&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameters z-begin z-ruby&quot;&gt;|&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-parameters z-ruby&quot;&gt;&lt;span class=&quot;z-variable z-parameter z-ruby&quot;&gt;gem&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-ruby&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-ruby&quot;&gt;version&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-parameters z-ruby&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameters z-end z-ruby&quot;&gt;|&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+  s&lt;span class=&quot;z-punctuation z-accessor z-dot z-ruby&quot;&gt;.&lt;&#x2F;span&gt;add_dependency&lt;span class=&quot;z-punctuation z-definition z-group z-begin z-ruby&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-require z-ruby&quot;&gt;&lt;span class=&quot;z-keyword z-other z-special-method z-ruby&quot;&gt;gem&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-sequence z-ruby&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-string z-ruby&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-ruby&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ruby&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;= &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-interpolation z-ruby&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-interpolation z-begin z-ruby&quot;&gt;#{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-interpolation z-ruby&quot;&gt;&lt;span class=&quot;z-source z-ruby z-embedded z-ruby&quot;&gt;version&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-interpolation z-end z-ruby&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-ruby&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ruby&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-group z-end z-ruby&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-keyword z-control z-ruby&quot;&gt;end&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;header-4&quot;&gt;Header 4&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;This is an unordered list following a header.&lt;&#x2F;li&gt;
+&lt;li&gt;This is an unordered list following a header.&lt;&#x2F;li&gt;
+&lt;li&gt;This is an unordered list following a header.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;header-5&quot;&gt;Header 5&lt;&#x2F;h5&gt;
+&lt;ol&gt;
+&lt;li&gt;This is an ordered list following a header.&lt;&#x2F;li&gt;
+&lt;li&gt;This is an ordered list following a header.&lt;&#x2F;li&gt;
+&lt;li&gt;This is an ordered list following a header.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h6 id=&quot;header-6&quot;&gt;Header 6&lt;&#x2F;h6&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;head1&lt;&#x2F;th&gt;&lt;th align=&quot;left&quot;&gt;head two&lt;&#x2F;th&gt;&lt;th align=&quot;left&quot;&gt;three&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;ok&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;good swedish fish&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;nice&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;out of stock&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;good and plenty&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;nice&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;ok&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;good &lt;code&gt;oreos&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;hmm&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;ok&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;good &lt;code&gt;zoute&lt;&#x2F;code&gt; drop&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;yumm&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h3 id=&quot;there-s-a-horizontal-rule-below-this&quot;&gt;There&#x27;s a horizontal rule below this.&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;here-is-an-unordered-list&quot;&gt;Here is an unordered list:&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Item foo&lt;&#x2F;li&gt;
+&lt;li&gt;Item bar&lt;&#x2F;li&gt;
+&lt;li&gt;Item baz&lt;&#x2F;li&gt;
+&lt;li&gt;Item zip&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;and-an-ordered-list&quot;&gt;And an ordered list:&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Item one&lt;&#x2F;li&gt;
+&lt;li&gt;Item two&lt;&#x2F;li&gt;
+&lt;li&gt;Item three&lt;&#x2F;li&gt;
+&lt;li&gt;Item four&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;and-a-nested-list&quot;&gt;And a nested list:&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;level 1 item
+&lt;ul&gt;
+&lt;li&gt;level 2 item&lt;&#x2F;li&gt;
+&lt;li&gt;level 2 item
+&lt;ul&gt;
+&lt;li&gt;level 3 item&lt;&#x2F;li&gt;
+&lt;li&gt;level 3 item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;level 1 item
+&lt;ul&gt;
+&lt;li&gt;level 2 item&lt;&#x2F;li&gt;
+&lt;li&gt;level 2 item&lt;&#x2F;li&gt;
+&lt;li&gt;level 2 item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;level 1 item
+&lt;ul&gt;
+&lt;li&gt;level 2 item&lt;&#x2F;li&gt;
+&lt;li&gt;level 2 item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;level 1 item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;small-image&quot;&gt;Small image&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.githubassets.com&#x2F;images&#x2F;icons&#x2F;emoji&#x2F;octocat.png&quot; alt=&quot;Octocat&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;large-image&quot;&gt;Large image&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;assets&#x2F;cb-27799&#x2F;images&#x2F;help&#x2F;repository&#x2F;branching.png&quot; alt=&quot;Branching&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;definition-lists-can-be-used-with-html-syntax&quot;&gt;Definition lists can be used with HTML syntax.&lt;&#x2F;h3&gt;
+&lt;dl&gt;
+&lt;dt&gt;Name&lt;&#x2F;dt&gt;
+&lt;dd&gt;Godzilla&lt;&#x2F;dd&gt;
+&lt;dt&gt;Born&lt;&#x2F;dt&gt;
+&lt;dd&gt;1952&lt;&#x2F;dd&gt;
+&lt;dt&gt;Birthplace&lt;&#x2F;dt&gt;
+&lt;dd&gt;Japan&lt;&#x2F;dd&gt;
+&lt;dt&gt;Color&lt;&#x2F;dt&gt;
+&lt;dd&gt;Green&lt;&#x2F;dd&gt;
+&lt;&#x2F;dl&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;The final element.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+</feed>

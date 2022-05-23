@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="https://pervoj.cz/images/icon.svg">
+	<link rel="stylesheet" href="https://pervoj.cz/nuclear/nuclear.css">
+	<link rel="stylesheet" href="https://pervoj.cz/styles.css">
+	<script src="https://pervoj.cz/nuclear/nuclear.js" defer=""></script>
+	<title>Kontakt – pervoj</title>
+</head>
+<body>
+	<a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+	<nav class="navbar">
+	<a href="https://pervoj.cz/cs" class="logo" aria-label="pervoj"></a>
+
+	<ul class="links">
+		<span class="space"></span>
+		<li><a href="https://pervoj.cz/cs"><i class="fa-solid fa-house"></i>&ensp;Domů</a></li>
+		<li><a href="https://pervoj.cz/cs/contact"><i class="fa-solid fa-address-book"></i>&ensp;Kontakt</a></li>
+		<li><a href="https://pervoj.cz/cs/blog"><i class="fa-solid fa-blog"></i>&ensp;Blog</a></li>
+		<li><a href="#"><i class="fa-solid fa-globe"></i>&ensp;Wiki</a></li>
+		<span class="space"></span>
+		<li class="btns">
+			<a href="https://pervoj.cz/cs/support" class="btn outline accent-light">
+				<i class="fa-solid fa-heart"></i>&ensp;Podpořit mě
+			</a>
+			<a href="https://pervoj.cz/cs/contact" class="btn accent-primary">
+				<i class="fa-solid fa-handshake"></i>&ensp;Najmout mě
+			</a>
+		</li>
+	</ul>
+
+	<button class="toggler borderless empty">
+		<span class="hamburger"></span>
+	</button>
+</nav>
+
+
+	
+
+<main id="main-content" class="container">
+	<h1 id="kontakt">Kontakt</h1>
+<pre data-linenos data-lang="vala" class="language-vala z-code"><code class="language-vala" data-lang="vala"><table><tbody><tr><td>1</td><td><span class="z-source z-vala"><span class="z-storage z-type z-source z-vala">int</span> main (<span class="z-storage z-type z-source z-vala">string</span>[] args) {
+<tr><td>2</td><td>  <span class="z-keyword z-operator z-source z-vala">var</span> app = <span class="z-keyword z-operator z-source z-vala">new</span> Gtk.Application (
+<tr><td><mark>3</mark></td><td><mark>    <span class="z-string z-quoted z-double z-source z-vala"><span class="z-punctuation z-definition z-string z-begin z-source z-vala">&quot;</span>io.github.myteam.MyApp<span class="z-punctuation z-definition z-string z-end z-source z-vala">&quot;</span></span>,
+</mark><tr><td><mark>4</mark></td><td><mark>    ApplicationFlags.FLAGS_NONE
+</mark><tr><td><mark>5</mark></td><td><mark>  );
+</mark><tr><td>6</td><td>
+<tr><td>7</td><td>  app.startup.connect (() =&gt; <span class="z-keyword z-operator z-source z-vala">new</span> Gtk.ApplicationWindow (app) {
+<tr><td>8</td><td>    default_width = <span class="z-constant z-numeric z-source z-vala">800</span>,
+<tr><td>9</td><td>    default_height = <span class="z-constant z-numeric z-source z-vala">600</span>,
+<tr><td>10</td><td>    title = <span class="z-string z-quoted z-double z-source z-vala"><span class="z-punctuation z-definition z-string z-begin z-source z-vala">&quot;</span>Hello, World!<span class="z-punctuation z-definition z-string z-end z-source z-vala">&quot;</span></span>
+<tr><td>11</td><td>  });
+<tr><td>12</td><td>
+<tr><td>13</td><td>  app.activate.connect (() =&gt; app.active_window.present ());
+<tr><td>14</td><td>
+<tr><td>15</td><td>  <span class="z-keyword z-control z-source z-vala">return</span> app.run (args);
+<tr><td>16</td><td>}
+</span></tr></tbody></table></code></pre>
+<p>Kontaktovat mě můžete skrze služby níže.</p>
+<p align="center">
+  <a href="mailto:info@pervoj.cz">
+    <img src="https://img.shields.io/badge/E--Mail-info%40pervoj.cz-blue?style=social&logo=mail.ru&logoColor=005FF9" height="25px">
+  </a>
+  &ensp;
+  <a href="https://discordapp.com/users/641536036169711617">
+    <img src="https://img.shields.io/badge/Discord-%40pervoj%20%237719-blue?style=social&logo=discord&logoColor=5865F2" height="25px">
+  </a>
+  &ensp;
+  <a href="https://matrix.to/#/@pervoj:matrix.org">
+    <img src="https://img.shields.io/badge/Matrix-%40pervoj:matrix.org-blue?style=social&logo=matrix&logoColor=000000" height="25px">
+  </a>
+</p>
+
+</main>
+
+<footer class="footer">
+	<p>&copy; <span class="year">2022</span> Vojtěch Perník</p>
+
+</footer>
+
+
+</body>
+</html>

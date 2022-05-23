@@ -1,0 +1,10 @@
+@import 'blog-list';
+@import 'blog-post';
+
+.blog-title {
+	padding: 2rem 1rem 0.8rem;
+	background-image: linear-gradient(0deg, #000 0%, transparent 100%);
+	color: #fff;
+
+	* { margin: 0; }
+}

@@ -1,0 +1,14 @@
+{# translate a string in the current language (lang) by looking
+up a key in the config.extra.l10n.lang. #}
+{%- macro get(key) -%}
+{{ config.extra.l10n[lang][key] | default(value = key) | safe }}
+{%- endmacro -%}
+
+{%- macro url(path) -%}
+{%- if lang == config.default_language -%}
+{{ get_url(path = path) }}
+{%- else -%}
+{%- set p = lang ~ "/" ~ path -%}
+{{ get_url(path = p) }}
+{%- endif -%}
+{%- endmacro -%}

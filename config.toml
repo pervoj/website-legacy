@@ -1,0 +1,73 @@
+title = "pervoj"
+description = "Vojtěch Perník's personal website"
+
+base_url = "https://pervoj.cz"
+default_language = "en"
+
+compile_sass = true
+
+
+[markdown]
+
+highlight_code = true
+
+extra_syntaxes_and_themes = ["syntaxes"]
+
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "inspired-github", filename = "syntax-light.css" },
+  { theme = "visual-studio-dark", filename = "syntax-dark.css" },
+]
+
+
+[languages.cs]
+
+description = "osobní stránka Vojtěcha Perníka"
+generate_feed = true
+build_search_index = true
+
+
+[extra]
+
+year = 2022
+
+
+
+[extra.l10n.en]
+
+date = "%B %_d, %Y"
+
+nav_home = "Home"
+nav_contact = "Contact"
+nav_blog = "Blog"
+nav_wiki = "Wiki"
+nav_support = "Support Me"
+nav_hire = "Hire Me"
+nav_toggle = "Toggle Menu"
+
+hp_title = "FOSS user, developer and translator"
+hp_description = "I'm <strong>Vojtěch Perník</strong>, a young programmer from Czechia, who likes to use a nickname <strong>pervoj</strong>. I can program in Vala, JavaScript, Python, Java and PHP. I love the vision of open source software and also all my projects are open source and can be found on GitHub. I also completely switched to Linux in 2020 and now I am using Fedora."
+hp_photo_alt = "photo"
+hp_shape_alt = "shape in background"
+
+blog_posts = "Posts"
+
+
+[extra.l10n.cs]
+
+date = "%_d. %_m. %Y"
+
+nav_home = "Domů"
+nav_contact = "Kontakt"
+nav_blog = "Blog"
+nav_wiki = "Wiki"
+nav_support = "Podpořit mě"
+nav_hire = "Najmout mě"
+nav_toggle = "Přepnout menu"
+
+hp_title = "Uživatel, vývojář a překladatel FOSS"
+hp_description = "Jsem <strong>Vojtěch Perník</strong>, mladý programátor z Česka, který rád používá přezdívku <strong>pervoj</strong>. Umím programovat ve Vale, JavaScriptu, Pythonu, Javě a PHP. Mám rád vizi open source softwaru a také všechny mé projekty jsou open source a jsou k nalezení na GitHubu. V roce 2020 jsem také kompletně přešel na Linux a nyní používám Fedoru."
+hp_photo_alt = "fotka"
+hp_shape_alt = "tvar na pozadí"
+
+blog_posts = "Příspěvky"

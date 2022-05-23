@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://pervoj.cz/sitemap.xml

@@ -1,9 +1,9 @@
 +++
+lang = "cs"
 title = "Nová wiki byla spuštěna!"
 date = "2022-04-02"
 
 [extra]
-lang = "cs"
 image = "images/posts/globe.svg"
 +++
 

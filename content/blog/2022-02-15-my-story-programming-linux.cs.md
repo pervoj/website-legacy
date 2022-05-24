@@ -1,9 +1,9 @@
 +++
+lang = "cs"
 title = "Jak jsem se dostal k programování a Linuxu"
 date = "2022-02-15"
 
 [extra]
-lang = "cs"
 image = "images/posts/tux.svg"
 +++
 

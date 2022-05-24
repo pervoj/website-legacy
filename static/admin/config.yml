@@ -13,9 +13,10 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     filter:
-      field: extra.lang
+      field: lang
       value: en
     fields:
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -23,7 +24,6 @@ collections:
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Language", name: "lang", widget: "hidden", default: "en" }
           - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
 
@@ -36,6 +36,7 @@ collections:
       field: extra.lang
       value: cs
     fields:
+      - { label: "Language", name: "lang", widget: "hidden", default: "cs" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -43,6 +44,5 @@ collections:
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Language", name: "lang", widget: "hidden", default: "en" }
           - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }

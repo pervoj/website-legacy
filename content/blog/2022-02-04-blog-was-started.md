@@ -1,9 +1,9 @@
 +++
+lang = "en"
 title = "Blog was started!"
 date = "2022-02-04"
 
 [extra]
-lang = "en"
 image = "images/posts/tada.svg"
 +++
 

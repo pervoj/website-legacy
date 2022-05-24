@@ -3,6 +3,7 @@ title = "Kompletní redesign webu"
 date = "2022-05-23"
 
 [extra]
+lang = "cs"
 image = "images/posts/celebration.jpg"
 +++
 

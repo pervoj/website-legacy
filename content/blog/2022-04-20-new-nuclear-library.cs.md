@@ -3,6 +3,7 @@ title = "Zcelá nová CSS knihovna"
 date = "2022-04-20"
 
 [extra]
+lang = "cs"
 image = "images/posts/nuclear.svg"
 +++
 

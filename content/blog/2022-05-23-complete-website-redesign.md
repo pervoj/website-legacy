@@ -3,6 +3,7 @@ title = "Complete website redesign"
 date = "2022-05-23"
 
 [extra]
+lang = "en"
 image = "images/posts/celebration.jpg"
 +++
 

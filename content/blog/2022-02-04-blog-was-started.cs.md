@@ -3,6 +3,7 @@ title = "Blog byl spuštěn!"
 date = "2022-02-04"
 
 [extra]
+lang = "cs"
 image = "images/posts/tada.svg"
 +++
 

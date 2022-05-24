@@ -3,6 +3,7 @@ title = "Brand new CSS library"
 date = "2022-04-20"
 
 [extra]
+lang = "en"
 image = "images/posts/nuclear.svg"
 +++
 

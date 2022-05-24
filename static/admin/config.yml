@@ -13,14 +13,18 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     filter:
-      field: "extra.lang"
-      value: "en"
+      field: extra.lang
+      value: en
     fields:
-      - { label: "Language", name: "extra.lang", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "extra.image", widget: "image" }
+      - label: "Extra"
+        name: "extra"
+        widget: "object"
+        fields:
+          - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+          - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "blog-cs"
@@ -29,12 +33,16 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}.cs"
     filter:
-      field: "extra.lang"
-      value: "cs"
+      field: extra.lang
+      value: cs
     fields:
-      - { label: "Language", name: "extra.lang", widget: "hidden", default: "cs" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "extra.image", widget: "image" }
+      - label: "Extra"
+        name: "extra"
+        widget: "object"
+        fields:
+          - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+          - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }

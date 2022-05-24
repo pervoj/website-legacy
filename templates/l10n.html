@@ -4,11 +4,12 @@ up a key in the config.extra.l10n.lang. #}
 	{{ config.extra.l10n[lang][key] | default(value = key) | safe }}
 {%- endmacro -%}
 
-{%- macro url(path, language = lang) -%}
-	{%- if language == config.default_language -%}
+{%- macro url(path, language="") -%}
+	{%- set l = language | default(value = lang) -%}
+	{%- if l == config.default_language -%}
 		{{ get_url(path = path) }}
 	{%- else -%}
-		{%- set p = language ~ "/" ~ path -%}
+		{%- set p = l ~ "/" ~ path -%}
 		{{ get_url(path = p) }}
 	{%- endif -%}
 {%- endmacro -%}

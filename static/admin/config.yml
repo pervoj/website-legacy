@@ -12,7 +12,11 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    filter:
+      field: "extra.lang"
+      value: "en"
     fields:
+      - { label: "Language", name: "extra.lang", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -24,7 +28,11 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}.cs"
+    filter:
+      field: "extra.lang"
+      value: "cs"
     fields:
+      - { label: "Language", name: "extra.lang", widget: "hidden", default: "cs" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }

@@ -13,10 +13,8 @@
 		<h2>{{ l10n::get(key = 'blog_posts') }}</h2>
 		<div class="blog-list">
 			{% for post in section.pages %}
-				{%- set image = post.extra.image | default(value = 'images/post-no-image.svg') -%}
-				{%- set imagePath = image | replace(from="static/", to="") -%}
-				{%- set imageUrl = get_url(path = imagePath) -%}
-				<article class="blog-list-post" style="--image: url('{{ imageUrl }}')">
+				{%- set image = post.extra.image | default(value = '/images/post-no-image.svg') -%}
+				<article class="blog-list-post" style="--image: url('{{ image }}')">
 					<div class="blog-title">
 						<h3 class="strong">{{ post.title }}</h3>
 						<time datetime="{{ post.date }}">

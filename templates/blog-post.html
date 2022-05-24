@@ -21,11 +21,8 @@
 
 <main id="main-content" class="container">
 
-	{# it's twice here, but it's the best solution for now #}
-	{%- set image = page.extra.image | default(value = 'images/post-no-image.svg') -%}
-	{%- set imagePath = image | replace(from="static/", to="") -%}
-	{%- set imageUrl = get_url(path = imagePath) -%}
-	<section class="blog-post-header" style="--image: url('{{ imageUrl }}')">
+	{%- set image = page.extra.image | default(value = '/images/post-no-image.svg') -%}
+	<section class="blog-post-header" style="--image: url('{{ image }}')">
 		<div class="blog-title">
 			<h1>{{ page.title }}</h1>
 			<time datetime="{{ page.date }}">

@@ -1,5 +1,6 @@
 title = "pervoj"
-description = "Vojtěch Perník's personal website"
+description = "FOSS user, developer and translator"
+generate_feed = true
 
 base_url = "https://pervoj.cz"
 default_language = "en"
@@ -22,9 +23,9 @@ highlight_themes_css = [
 
 [languages.cs]
 
-description = "osobní stránka Vojtěcha Perníka"
+title = "pervoj"
+description = "Uživatel, vývojář a překladatel FOSS"
 generate_feed = true
-build_search_index = true
 
 
 [extra]

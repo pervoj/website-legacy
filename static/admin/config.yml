@@ -18,13 +18,13 @@ collections:
     fields:
       - { label: "Language", name: "lang", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "extra.description", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "extra.description", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "blog-cs"
@@ -38,11 +38,11 @@ collections:
     fields:
       - { label: "Language", name: "lang", widget: "hidden", default: "cs" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "extra.description", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "extra.description", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }

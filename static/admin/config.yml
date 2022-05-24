@@ -33,7 +33,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}.cs"
     filter:
-      field: extra.lang
+      field: lang
       value: cs
     fields:
       - { label: "Language", name: "lang", widget: "hidden", default: "cs" }

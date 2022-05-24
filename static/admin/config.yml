@@ -20,12 +20,12 @@ collections:
       - { label: "Language", name: "lang", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slugurl", widget: "string" }
-      - { label: "Description", name: "extra.description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
         name: "extra"
         widget: "object"
         fields:
+          - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
@@ -41,11 +41,11 @@ collections:
       - { label: "Language", name: "lang", widget: "hidden", default: "cs" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slugurl", widget: "string" }
-      - { label: "Description", name: "extra.description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
         name: "extra"
         widget: "object"
         fields:
+          - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }

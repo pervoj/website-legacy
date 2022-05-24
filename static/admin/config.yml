@@ -18,7 +18,7 @@ collections:
     fields:
       - { label: "Language", name: "lang", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slugurl", widget: "string", pattern: ["^[A-Za-z0-9\\s]{1,}$", "Slug can't contain spaces!"] }
+      - { label: "Slug", name: "slugurl", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
@@ -39,7 +39,7 @@ collections:
     fields:
       - { label: "Language", name: "lang", widget: "hidden", default: "cs" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slugurl", widget: "string", pattern: ["^[A-Za-z0-9\\s]{1,}$", "Slug can't contain spaces!"] }
+      - { label: "Slug", name: "slugurl", widget: "string" }
       - { label: "Description", name: "extra.description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"

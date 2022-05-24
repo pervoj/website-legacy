@@ -4,12 +4,18 @@ up a key in the config.extra.l10n.lang. #}
 	{{ config.extra.l10n[lang][key] | default(value = key) | safe }}
 {%- endmacro -%}
 
-{%- macro url(path, language="") -%}
-	{%- set l = language | default(value = lang) -%}
-	{%- if l == config.default_language -%}
-		{{ get_url(path = path) }}
+{%- macro url(path) %}{{ get_url(path = path, lang = lang) }}{% endmacro -%}
+
+{%- macro trim_slash(value) -%}
+{{ value | trim_start_matches(pat = "/") | trim_end_matches(pat = "/") }}
+{%- endmacro -%}
+
+{%- macro current_url(l) -%}
+	{%- set path = self::trim_slash(value = current_path) -%}
+	{%- if path == lang -%}
+		{%- set path = '' -%}
 	{%- else -%}
-		{%- set p = l ~ "/" ~ path -%}
-		{{ get_url(path = p) }}
+		{%- set path = path | trim_start_matches(pat = lang ~ '/') -%}
 	{%- endif -%}
+	{{ get_url(path = path, lang = l) }}
 {%- endmacro -%}

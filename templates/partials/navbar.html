@@ -9,6 +9,10 @@
 		<li><a href="#"><i class="fa-solid fa-globe"></i>&ensp;{{ l10n::get(key = 'nav_wiki') }}</a></li>
 		<li class="space"></li>
 		<li class="btns">
+			<a href="{{ l10n::current_url(l = 'en') }}">en</a>
+			<a href="{{ l10n::current_url(l = 'cs') }}">cs</a>
+		</li>
+		<li class="btns">
 			<a href="{{ l10n::url(path = 'support') }}" class="btn outline accent-light">
 				<i class="fa-solid fa-heart"></i>&ensp;{{ l10n::get(key = 'nav_support') }}
 			</a>

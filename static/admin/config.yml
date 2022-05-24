@@ -11,13 +11,14 @@ collections:
     label: "Blog (en)"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.slugurl}}"
     filter:
       field: lang
       value: en
     fields:
       - { label: "Language", name: "lang", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slugurl", widget: "string", pattern: ["^[A-Za-z0-9\s]{1,}$", "Slug can't contain spaces!"] }
       - { label: "Description", name: "extra.description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
@@ -31,13 +32,14 @@ collections:
     label: "Blog (cs)"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}.cs"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.slugurl}}.cs"
     filter:
       field: lang
       value: cs
     fields:
       - { label: "Language", name: "lang", widget: "hidden", default: "cs" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slugurl", widget: "string", pattern: ["^[A-Za-z0-9\s]{1,}$", "Slug can't contain spaces!"] }
       - { label: "Description", name: "extra.description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"

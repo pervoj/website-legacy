@@ -1,4 +1,5 @@
-{% import "l10n.html" as l10n %}
+{%- import "l10n.html" as l10n -%}
+
 
 <!DOCTYPE html>
 <html lang="{{ lang }}">
@@ -11,6 +12,16 @@
 	<meta name="author" content="Vojtěch Perník">
 	<meta name="keywords" content="Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development">
 
+	{% block metatags -%}
+		<meta property="og:title" content="
+			{%- if page.title -%}
+				{{ page.title }} –
+			{%- elif section.title -%}
+				{{ section.title }} –
+			{%- endif %} pervoj" />
+		<meta property="og:image" content="{{ get_url(path='images/icon-512.png') }}" />
+	{%- endblock %}
+
 	<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}">
 	<link rel="icon" href="{{ get_url(path='images/icon.svg') }}">
 	<link rel="stylesheet" href="https://pervoj.cz/nuclear/nuclear.css">
@@ -20,7 +31,12 @@
 	<script src="https://cdn.skypack.dev/@hotwired/turbo" type="module" defer></script>
 	<script src="{{ get_url(path='language.js') }}"></script>
 
-	{% block head %}{% endblock %}
+	<title>
+		{%- if page.title -%}
+			{{ page.title }} –
+		{%- elif section.title -%}
+			{{ section.title }} –
+		{%- endif %} pervoj</title>
 </head>
 <body>
 	<a href="#main-content" class="skip-to-content">Skip to Content</a>

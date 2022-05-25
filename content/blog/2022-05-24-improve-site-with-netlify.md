@@ -24,7 +24,7 @@ If you're at all interested in Netlify (no, this really isn't paid advertising..
 
 First thing you need to do is to create a [Netlify account](https://app.netlify.com/). Then import your repository from GitHub and you are done (mostly). Go to Deploys section of your site dashbord and check if the site was built without any errors. If you use Zola like I do, you will get an error. However, this error is really easy to fix. Just create a `netlify.toml` in your repository root directory and fill it with the content bellow.
 
-```toml
+```toml,linenos
 [build]
 # if the site content isn't in the root directory, specify the path here
 base = ""

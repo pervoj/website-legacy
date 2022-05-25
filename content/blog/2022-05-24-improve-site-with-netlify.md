@@ -16,4 +16,33 @@ extra:
 
 For a long time I used Github Pages to host my websites and I was relatively satisfied with it. Then, when I found Netlify, I just wanted to give it a try. So I tried to deploy this website there. And it was... surprisingly easy and fast. I am using [Zola](https://www.getzola.org/) to build this site. With GitHub Pages you need to setup GitHub Action for building your site, because it doesn't have Zola installed by default. I had also problems with the existing Zola actions so I had to make my own. It had to download Zola archive from releases, upack it and only then build the site. With Netlify the only thing you need to do is to copy [a few lines from Zola documentation](https://www.getzola.org/documentation/deployment/netlify/) and you are done. Then just commit to the repository and Netlify will build the site for you.
 
-There is also [Netlify CMS](https://www.netlifycms.org/). An open source script in JS that adds a full-fledged CMS to your website. That's a convenience made just for me. Always when I wanted to write new post, I had to clone the whole repository, write the post, commit and push it back. And when I started writing on one computer, I couldn't finish it on another. Netlify CMS solves it. Thanks to its editorial workflow you can save posts as drafts and publish them when they're ready.
+There is also [Netlify CMS](https://www.netlifycms.org/). An open source script in JS that adds a full-fledged CMS to your website. That's a convenience made just for me. Always when I wanted to write new post, I had to clone the whole repository, write the post, commit and push it back. And when I started writing on one computer, I couldn't finish it on another. Netlify CMS solves it. Thanks to its editorial workflow you can save posts as drafts and publish them when they're ready. You can also choose if you want to use their nice WYSIWYG editor or write markdown directly.
+
+## How to migrate your site to Netlify
+
+If you're at all interested in Netlify (no, this really isn't paid advertising... 😅️), here is how to setup it.
+
+First thing you need to do is to create a [Netlify account](https://app.netlify.com/). Then import your repository from GitHub and you are done (mostly). Go to Deploys section of your site dashbord and check if the site was built without any errors. If you use Zola like I do, you will get an error. However, this error is really easy to fix. Just create a `netlify.toml` in your repository root directory and fill it with the content bellow.
+
+```toml
+[build]
+# if the site content isn't in the root directory, specify the path here
+base = ""
+publish = "public"
+command = "zola build"
+
+[build.environment]
+# set to the latest version from Zola releases
+ZOLA_VERSION = "0.15.3"
+
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
+```
+
+If you are using a different static site generator, try to search for `[your generator] deploy to netlify`.
+
+Everything should be working by now.
+
+## How to enable Netlify CMS
+
+This really depends on your site templates, so I'll provide only the basic guide. For more information take a look at the [official docs](https://www.netlifycms.org/docs/).

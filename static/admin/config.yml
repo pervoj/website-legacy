@@ -6,6 +6,8 @@ publish_mode: editorial_workflow
 media_folder: "static/images/posts"
 public_folder: "/images/posts"
 
+logo_url: "https://pervoj.github.io/nuclear/assets/logos/default-dark.svg"
+
 collections:
 
   - name: "blog-en"

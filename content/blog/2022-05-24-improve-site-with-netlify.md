@@ -127,7 +127,36 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 ```
 
-All the configuration is done by now.
+All the configuration is done by now. The whole file should look like this:
+
+```yaml
+backend:
+  name: git-gateway
+  branch: master # your branch name
+
+publish_mode: editorial_workflow
+
+# Media files will be stored in the repo under static/images/uploads
+media_folder: "static/images/posts"
+# The src attribute for uploaded media will begin with /images/uploads
+public_folder: "/images/posts"
+
+collections:
+  - name: "blog" # Used in CMS routes, e.g. /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g. YYYY-MM-DD-title.md
+    fields: # The fields in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", time_format: false }
+      - label: "Extra"
+        name: "extra"
+        widget: "object"
+        fields:
+          - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+```
 
 ### Authentication
 

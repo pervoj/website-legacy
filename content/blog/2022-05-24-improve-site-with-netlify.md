@@ -5,6 +5,7 @@ slugurl: improve-site-with-netlify
 date: 2022-05-24T19:32:08.613Z
 extra:
   description: I just migrated my website to Netlify and here are my thougts.
+  image: /images/posts/netlify.svg
 ---
 ## notes
 

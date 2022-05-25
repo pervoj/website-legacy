@@ -160,4 +160,38 @@ collections:
 
 ### Authentication
 
-To be able to use the CMS, we also need to setup some login methods.
+To be able to use the CMS, we also need to setup some login methods. For that we will use Netlify's authentication service Identidy.
+
+1. Go to your **site settings** → **Identity** (not the one in the top menu, but in submenu of site settings), and select **Enable Identity service**.
+2. Under **Registration preferences** select **Invite only**. We don't want to let everyone to edit our site.
+3. Under **External providers** we can select e.g. GitHub as our login provider. Otherwise we will be logging in with our Netlify account.
+4. Scroll down to **Services** → **Git Gateway** and click **Enable Git Gateway**.
+5. In the top menu click **Identity** and send invite to your email, that is linked with GitHub or with your Netlify account.
+
+The last thing we need to do is to add this to `<head>` of every page and post (our base template) as well as the CMS `index.html`:
+
+```html
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+```
+
+And this before the closing </body> tag, now ONLY to our base template:
+
+```html
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function() {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+```
+
+And that's all!
+
+The last thing you need to do is to go to your email, click the invitation link and follow instructions. Now just visit `yoursite.tld/admin` and you can login!
+
+And that is everything for this longer post! Hope it helped and thanks for reading!

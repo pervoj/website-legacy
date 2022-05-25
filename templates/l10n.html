@@ -11,7 +11,7 @@ up a key in the config.extra.l10n.lang. #}
 {%- endmacro -%}
 
 {%- macro current_url(l) -%}
-	{%- set path = self::trim_slash(value = current_path) -%}
+	{%- set path = l10n::trim_slash(value = current_path) -%}
 	{%- if path == lang -%}
 		{%- set path = '' -%}
 	{%- else -%}

@@ -7,4 +7,4 @@ extra:
   description: Právě jsem přemigroval svůj web na Netlify a tady jsou mé myšlenky.
   image: /images/posts/netlify.svg
 ---
-...
+Český překlad článku zatím není hotový.

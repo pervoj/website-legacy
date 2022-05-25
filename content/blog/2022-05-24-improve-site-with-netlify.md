@@ -24,7 +24,7 @@ If you're at all interested in Netlify (no, this really isn't paid advertising..
 
 First thing you need to do is to create a [Netlify account](https://app.netlify.com/). Then import your repository from GitHub and you are done (mostly). Go to Deploys section of your site dashbord and check if the site was built without any errors. If you use Zola like I do, you will get an error. However, this error is really easy to fix. Just create a `netlify.toml` in your repository root directory and fill it with the content bellow.
 
-```toml,linenos
+```toml
 [build]
 # if the site content isn't in the root directory, specify the path here
 base = ""
@@ -46,3 +46,30 @@ Everything should be working by now.
 ## How to enable Netlify CMS
 
 This really depends on your site templates, so I'll provide only the basic guide. For more information take a look at the [official docs](https://www.netlifycms.org/docs/).
+
+Add `admin` directory into your `static/` (if you are using Zola). In this directory create two files, `index.html` and `config.yml`.
+
+The content of `index.html` is simple:
+
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>
+```
+
+All the magic is done in our `config.yml`. The first thing we'll add into the file will be this:
+
+```yaml
+backend:
+  name: git-gateway
+  branch: master # your branch name
+```

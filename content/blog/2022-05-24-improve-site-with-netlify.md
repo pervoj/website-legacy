@@ -73,3 +73,42 @@ backend:
   name: git-gateway
   branch: master # your branch name
 ```
+
+With that we are specifying our backend protocol and our publication branch.
+
+Bellow that add this line (can't be indented):
+
+```yaml
+publish_mode: editorial_workflow
+```
+
+This enables the editorial workflow I talked about above.
+
+Now we need to specify the paths for our images (again not indented):
+
+```yaml
+# Media files will be stored in the repo under static/images/uploads
+media_folder: "static/images/posts"
+# The src attribute for uploaded media will begin with /images/uploads
+public_folder: "/images/posts"
+```
+
+And now comes the biggest magic. Our collections. Collections define list of form elements in the CMS UI, that will be converted into your front matter.
+
+So if your front matter looks like this:
+
+```toml
++++
+title = "My first post"
+date = "2022-05-25"
+
+[extra]
+image = "/images/posts/my-beautiful-image.png"
++++
+```
+
+Then your `collections` will look like so:
+
+```yaml
+
+```

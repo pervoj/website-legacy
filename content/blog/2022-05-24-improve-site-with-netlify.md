@@ -110,5 +110,25 @@ image = "/images/posts/my-beautiful-image.png"
 Then your `collections` will look like so:
 
 ```yaml
-
+collections:
+  - name: "blog" # Used in CMS routes, e.g. /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g. YYYY-MM-DD-title.md
+    fields: # The fields in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", time_format: false }
+      - label: "Extra"
+        name: "extra"
+        widget: "object"
+        fields:
+          - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
 ```
+
+All the configuration is done by now.
+
+### Authentication
+
+To be able to use the CMS, we also need to setup some login methods.

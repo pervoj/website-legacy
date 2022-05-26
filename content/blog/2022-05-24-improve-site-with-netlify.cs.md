@@ -36,7 +36,7 @@ Pokud používáte jiný generátor, zkuste vyhledat `[váš generátor] deploy 
 
 Nyní by vše mělo fungovat
 
-## How to enable Netlify CMS
+## Jak povolit Netlify CMS
 
 This really depends on your site templates, so I'll provide only the basic guide. For more information take a look at the [official docs](https://www.netlifycms.org/docs/).
 

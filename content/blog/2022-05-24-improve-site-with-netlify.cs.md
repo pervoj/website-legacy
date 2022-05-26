@@ -185,8 +185,8 @@ A tohoto před uzavírací tak `</body>`, nyní POUZE naší šablony *base*:
 </script>
 ```
 
-And that's all!
+A to je vše!
 
-The last thing you need to do is to go to your email, click the invitation link and follow instructions. Now just visit `yoursite.tld/admin` and you can login!
+Poslední věcí, kterou musíte udělat, je jít do vašeho emailu, kliknout na zvací odkaz a postupovat podle instrukcí. Teď už jen navštivte `vasweb.tld/admin` a můžete se přihlásit!
 
-And that is everything for this longer post! Hope it helped and thanks for reading!
+A to je pro tento trochu delší příspěvek vše! Doufám, že jsem vám alespoň trochu pomohl, a díky za přečtení!

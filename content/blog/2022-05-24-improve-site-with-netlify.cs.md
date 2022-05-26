@@ -42,7 +42,7 @@ Postup hodně závisí na šablonách vašeho webu, takže popíšu jen základn
 
 V adresáři `static/` (pokud používáte Zolu) vytvořte nový adresář `admin`. V tomto adresáři vytvořte dva nové soubory, `index.html` a `config.yml`.
 
-The content of `index.html` is simple:
+Obsah souboru `index.html` je jednoduchý:
 
 ```html
 <!doctype html>
@@ -59,15 +59,15 @@ The content of `index.html` is simple:
 </html>
 ```
 
-All the magic is done in our `config.yml`. The first thing we'll add into the file will be this:
+Veškerá magie se odehrává v souboru `config.yml`. První věcí, kterou do tohoto souboru přídáme bude toto:
 
 ```yaml
 backend:
   name: git-gateway
-  branch: master # your branch name
+  branch: master # název vaší větve
 ```
 
-With that we are specifying our backend protocol and our publication branch.
+Tímto kódem specifikujeme protokol backendu a větev pro publikaci.
 
 Bellow that add this line (can't be indented):
 

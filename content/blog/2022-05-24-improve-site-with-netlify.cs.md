@@ -159,17 +159,17 @@ Abychom mohli CMS využívat, potřebujeme se nějak přihlásit. K tomu použij
 
 1. Jděte do nastavení stránky (**site settings**) → **Identity** (ne to v horním menu, ale v bočním podmenu v nastavení), a vyberte **Enable Identity service**.
 2. Pod **Registration preferences** vyberte **Invite only**. Nechceme povolit komukoli editovat naše články.
-3. Pod **External providers** vyberte jako poskytovatele přihlášení např. GitHub. Otherwise we will be logging in with our Netlify account.
-4. Scroll down to **Services** → **Git Gateway** and click **Enable Git Gateway**.
-5. In the top menu click **Identity** and send invite to your email, that is linked with GitHub or with your Netlify account.
+3. Pod **External providers** vyberte jako poskytovatele přihlášení např. GitHub. Jinak se budete přihlašovat vaším účtem Netlify.
+4. Sescrollujte dolů k **Services** → **Git Gateway** a klikněte na **Enable Git Gateway**.
+5. Nyní v horním menu vyberte **Identity** a pošlete si pozvánku na email, který je propojený s GitHubem, nebo vaším účtem Netlify.
 
-The last thing we need to do is to add this to `<head>` of every page and post (our base template) as well as the CMS `index.html`:
+Poslední věcí, kterou musíme udělat, je přídání tohoto řádku do `<head>` každé stránky a příspěvku (prostě šablony *base*) a také `index.html` našeho CMS:
 
 ```html
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 ```
 
-And this before the closing </body> tag, now ONLY to our base template:
+A tohoto před uzavírací tak `</body>`, nyní POUZE naší šablony *base*:
 
 ```html
 <script>

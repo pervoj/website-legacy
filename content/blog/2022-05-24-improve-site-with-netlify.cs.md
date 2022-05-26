@@ -38,9 +38,9 @@ Nyní by vše mělo fungovat
 
 ## Jak povolit Netlify CMS
 
-This really depends on your site templates, so I'll provide only the basic guide. For more information take a look at the [official docs](https://www.netlifycms.org/docs/).
+Postup hodně závisí na šablonách vašeho webu, takže popíšu jen základní postup. Pro více informací se podívejte do [oficiální dokumentace](https://www.netlifycms.org/docs/).
 
-Add `admin` directory into your `static/` (if you are using Zola). In this directory create two files, `index.html` and `config.yml`.
+V adresáři `static/` (pokud používáte Zolu) vytvořte nový adresář `admin`. V tomto adresáři vytvořte dva nové soubory, `index.html` a `config.yml`.
 
 The content of `index.html` is simple:
 

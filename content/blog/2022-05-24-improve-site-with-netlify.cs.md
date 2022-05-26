@@ -15,26 +15,26 @@ Také můžete využít [Netlify CMS](https://www.netlifycms.org/). Open source 
 
 Pokud vás Netlify aspoň trochu zaujalo (ne, tohle vážně není placená propagace... 😅️), zde je návod, jak ho nastavit.
 
-First thing you need to do is to create a [Netlify account](https://app.netlify.com/). Then import your repository from GitHub and you are done (mostly). Go to Deploys section of your site dashbord and check if the site was built without any errors. If you use Zola like I do, you will get an error. However, this error is really easy to fix. Just create a `netlify.toml` in your repository root directory and fill it with the content bellow.
+První věc, kterou musíte udělat, je vytvořit si [účet na Netlify](https://app.netlify.com/). Potom jen importovat váš repozitář z GitHubu a jste hotovi (skoro). Nyní se na nástěnce vašeho webu v Netlify přepněte do sekce Deploys a zkontrolujte, jestli se stránka zkompilovala bez chyb. Pokud jako já používáte Zolu, jednu chybu uvidíte. Nicméně tato chyba je na opravu opravdu jednoduchá. Jen v kořenovém adresáři vašeho repozitáře vytvořte soubor `netlify.toml` a vložte do něj následující kód:
 
 ```toml
 [build]
-# if the site content isn't in the root directory, specify the path here
+# pokud obsah webu není v kořenovém adresáři, nastavte zde cestu
 base = ""
 publish = "public"
 command = "zola build"
 
 [build.environment]
-# set to the latest version from Zola releases
+# nastavte na nejnovější verzi
 ZOLA_VERSION = "0.15.3"
 
 [context.deploy-preview]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
 ```
 
-If you are using a different static site generator, try to search for `[your generator] deploy to netlify`.
+Pokud používáte jiný generátor, zkuste vyhledat `[váš generátor] deploy to netlify`.
 
-Everything should be working by now.
+Nyní by vše mělo fungovat
 
 ## How to enable Netlify CMS
 

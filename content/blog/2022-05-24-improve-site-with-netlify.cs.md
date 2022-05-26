@@ -69,95 +69,97 @@ backend:
 
 Tímto kódem specifikujeme protokol backendu a větev pro publikaci.
 
-Bellow that add this line (can't be indented):
+Pod to přidáme tento řádek (nesmí být odsazen):
 
 ```yaml
 publish_mode: editorial_workflow
 ```
 
-This enables the editorial workflow I talked about above.
+To povolí již zmíněný editorial workflow.
 
-Now we need to specify the paths for our images (again not indented):
+Nyní musíme specifikovat cesty k obrázkům (znovu není odsazeno):
 
 ```yaml
-# Media files will be stored in the repo under static/images/uploads
+# Soubory médií budou skladovány v repozitáři v static/images/uploads
 media_folder: "static/images/posts"
-# The src attribute for uploaded media will begin with /images/uploads
+# Atribut src nahraných médií bude začínat /images/uploads
 public_folder: "/images/posts"
 ```
 
 And now comes the biggest magic. Our collections. Collections define list of form elements in the CMS UI, that will be converted into your front matter.
 
-So if your front matter looks like this:
+A nyní přichází to největší kouzlo. Kolekce. Kolekce definují seznam elementů formuláře v grafickém rozhraní CMS, které budou převedeny do *front matter* vašich příspěvků.
+
+Pokud tedy vaše *front matter* vypadá takto:
 
 ```toml
 +++
-title = "My first post"
+title = "Můj první příspěvek"
 date = "2022-05-25"
 
 [extra]
-image = "/images/posts/my-beautiful-image.png"
+image = "/images/posts/muj-nadherny-obrazek.png"
 +++
 ```
 
-Then your `collections` will look like so:
+Pod `collections` musíte vložit následující:
 
 ```yaml
 collections:
-  - name: "blog" # Used in CMS routes, e.g. /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g. YYYY-MM-DD-title.md
-    fields: # The fields in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", time_format: false }
+  - name: "blog" # Použito v routech CMS, např. /admin/collections/blog
+    label: "Blog" # Použito v grafickém rozhraní
+    folder: "content/blog" # Cesta do adresáře, kde jsou uloženy články
+    create: true # Povolit uživatelům vytvářet články v této kolekci
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Šablona jména souboru, např. YYYY-MM-DD-title.md
+    fields: # Položky v front matter
+      - { label: "Titulek", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Obrázek", name: "image", widget: "image", required: false }
+      - { label: "Obsah článku", name: "body", widget: "markdown" }
 ```
 
-All the configuration is done by now. The whole file should look like this:
+Veškerá konfigurace je nyní hotová. Celý soubor bude vypadat takto:
 
 ```yaml
 backend:
   name: git-gateway
-  branch: master # your branch name
+  branch: master # název vaší větve
 
 publish_mode: editorial_workflow
 
-# Media files will be stored in the repo under static/images/uploads
+# Soubory médií budou skladovány v repozitáři v static/images/uploads
 media_folder: "static/images/posts"
-# The src attribute for uploaded media will begin with /images/uploads
+# Atribut src nahraných médií bude začínat /images/uploads
 public_folder: "/images/posts"
 
 collections:
-  - name: "blog" # Used in CMS routes, e.g. /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g. YYYY-MM-DD-title.md
-    fields: # The fields in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", time_format: false }
+  - name: "blog" # Použito v routech CMS, např. /admin/collections/blog
+    label: "Blog" # Použito v grafickém rozhraní
+    folder: "content/blog" # Cesta do adresáře, kde jsou uloženy články
+    create: true # Povolit uživatelům vytvářet články v této kolekci
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Šablona jména souboru, např. YYYY-MM-DD-title.md
+    fields: # Položky v front matter
+      - { label: "Titulek", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", time_format: false }
       - label: "Extra"
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Obrázek", name: "image", widget: "image", required: false }
+      - { label: "Obsah článku", name: "body", widget: "markdown" }
 ```
 
-### Authentication
+### Přihlašování
 
-To be able to use the CMS, we also need to setup some login methods. For that we will use Netlify's authentication service Identidy.
+Abychom mohli CMS využívat, potřebujeme se nějak přihlásit. K tomu použijeme autentikační službu od Netlify zvanou Identity.
 
-1. Go to your **site settings** → **Identity** (not the one in the top menu, but in submenu of site settings), and select **Enable Identity service**.
-2. Under **Registration preferences** select **Invite only**. We don't want to let everyone to edit our site.
-3. Under **External providers** we can select e.g. GitHub as our login provider. Otherwise we will be logging in with our Netlify account.
+1. Jděte do nastavení stránky (**site settings**) → **Identity** (ne to v horním menu, ale v bočním podmenu v nastavení), a vyberte **Enable Identity service**.
+2. Pod **Registration preferences** vyberte **Invite only**. Nechceme povolit komukoli editovat naše články.
+3. Pod **External providers** vyberte jako poskytovatele přihlášení např. GitHub. Otherwise we will be logging in with our Netlify account.
 4. Scroll down to **Services** → **Git Gateway** and click **Enable Git Gateway**.
 5. In the top menu click **Identity** and send invite to your email, that is linked with GitHub or with your Netlify account.
 

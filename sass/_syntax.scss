@@ -3,13 +3,13 @@
 
 pre.z-code {
 	border-radius: 0.4rem;
-	background: none;
 	box-shadow: 0 0 0.3rem rgba(0,0,0,.5);
 	overflow-x: scroll;
 }
 
 pre.z-code > code {
 	display: block;
+	background-color: transparent !important;
 	min-width: max-content;
 	padding: 0.2rem 0.4rem;
 	border-radius: inherit;
@@ -25,6 +25,8 @@ pre.z-code > code {
 			color: #dcdcdc;
 		}
 	}
+
+	span { background-color: transparent !important; }
 
 	table { border-spacing: 0; }
 	td { padding: 0; border: none; }

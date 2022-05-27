@@ -34,7 +34,7 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 
 Pokud používáte jiný generátor, zkuste vyhledat `[váš generátor] deploy to netlify`.
 
-Nyní by vše mělo fungovat
+Nyní by vše mělo fungovat.
 
 ## Jak povolit Netlify CMS
 
@@ -85,8 +85,6 @@ media_folder: "static/images/posts"
 # Atribut src nahraných médií bude začínat /images/uploads
 public_folder: "/images/posts"
 ```
-
-And now comes the biggest magic. Our collections. Collections define list of form elements in the CMS UI, that will be converted into your front matter.
 
 A nyní přichází to největší kouzlo. Kolekce. Kolekce definují seznam elementů formuláře v grafickém rozhraní CMS, které budou převedeny do *front matter* vašich příspěvků.
 

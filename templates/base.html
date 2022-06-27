@@ -1,60 +1,56 @@
 {%- import "l10n.html" as l10n -%}
 
-
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<meta name="description" content="{{ l10n::get(key = 'hp_title') }}">
-	<meta name="author" content="Vojtěch Perník">
-	<meta name="keywords" content="Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development">
+		<meta name="description" content="{{ l10n::get(key = 'hp_title') }}" />
+		<meta name="author" content="Vojtěch Perník" />
+		<meta
+			name="keywords"
+			content="Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development"
+		/>
 
-	{% block metatags -%}
-		<meta property="og:title" content="
+		{% block metatags -%}
+		<meta
+			property="og:title"
+			content="
 			{%- if page.title -%}
 				{{ page.title }} –
 			{%- elif section.title -%}
 				{{ section.title }} –
-			{%- endif %} pervoj" />
-		<meta property="og:image" content="{{ get_url(path='images/icon-512.png') }}" />
-	{%- endblock %}
+			{%- endif %} pervoj"
+		/>
+		<meta
+			property="og:image"
+			content="{{ get_url(path='images/icon-512.png') }}"
+		/>
+		{%- endblock %}
 
-	<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}">
-	<link rel="icon" href="{{ get_url(path='images/icon.svg') }}">
-	<link rel="stylesheet" href="https://pervoj.github.io/nuclear/nuclear.css">
-	<link rel="stylesheet" href="{{ get_url(path='styles.css') }}">
+		<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}" />
+		<link rel="icon" href="{{ get_url(path='images/icon.svg') }}" />
+		<link
+			rel="stylesheet"
+			href="https://pervoj.github.io/nuclear/nuclear.css"
+		/>
+		<link rel="stylesheet" href="{{ get_url(path='styles.css') }}" />
 
-	<script src="https://pervoj.github.io/nuclear/nuclear.js" async></script>
-	<script src="https://cdn.skypack.dev/@hotwired/turbo" type="module" async></script>
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
+		<script
+			src="https://pervoj.github.io/nuclear/nuclear.js"
+			async
+		></script>
 
-	<title>
-		{%- if page.title -%}
-			{{ page.title }} –
-		{%- elif section.title -%}
-			{{ section.title }} –
-		{%- endif %} pervoj</title>
-</head>
-<body>
-	<a href="#main-content" class="skip-to-content">Skip to Content</a>
+		<title>
+			{%- if page.title -%} {{ page.title }} – {%- elif section.title -%}
+			{{ section.title }} – {%- endif %} pervoj
+		</title>
+	</head>
+	<body>
+		<a href="#main-content" class="skip-to-content">Skip to Content</a>
 
-	{% include "partials/navbar.html" %}
-
-	{% block content %}{% endblock %}
-
-	<script>
-		if (window.netlifyIdentity) {
-			window.netlifyIdentity.on("init", function(user) {
-				if (!user) {
-					window.netlifyIdentity.on("login", function() {
-						document.location.href = "/admin/";
-					});
-				}
-			});
-		}
-	</script>
-</body>
+		{% include "partials/navbar.html" %} {% block content %}{% endblock %}
+	</body>
 </html>

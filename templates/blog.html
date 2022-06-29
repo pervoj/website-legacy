@@ -1,36 +1,30 @@
-{% extends "base.html" %}
-
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <main id="main-content" class="container">
-
-	<section>
-		{{ section.content | safe }}
-	</section>
+	<section>{{ section.content | safe }}</section>
 
 	<section>
 		<h2>{{ l10n::get(key = 'blog_posts') }}</h2>
 		<div class="blog-list">
-			{% for post in section.pages %}
-				{%- set image = post.extra.image | default(value = '/images/post-no-image.svg') -%}
-				<article class="blog-list-post" style="--image: url('{{ image }}')">
-					<div class="blog-title">
-						<h3 class="strong">{{ post.title }}</h3>
-						<time datetime="{{ post.date }}">
-							{{ post.date | date(format = l10n::get(key = 'date')) }}
-						</time>
-					</div>
-					<a href="{{ post.permalink }}" aria-label="{{ post.title }}"></a>
-				</article>
+			{% for post in section.pages %} {%- set image = post.extra.image |
+			default(value = '/images/post-no-image.png') -%}
+			<article class="blog-list-post" style="--image: url('{{ image }}')">
+				<div class="blog-title">
+					<h3 class="strong">{{ post.title }}</h3>
+					<time datetime="{{ post.date }}">
+						{{ post.date | date(format = l10n::get(key = 'date')) }}
+					</time>
+				</div>
+				<a
+					href="{{ post.permalink }}"
+					aria-label="{{ post.title }}"
+				></a>
+			</article>
 			{% endfor %}
 		</div>
 	</section>
-
 </main>
 
-<footer class="footer">
-	{% include "partials/footer-content.html" %}
-</footer>
+<footer class="footer">{% include "partials/footer-content.html" %}</footer>
 
 {% endblock %}

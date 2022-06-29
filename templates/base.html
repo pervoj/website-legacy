@@ -28,8 +28,23 @@
 			property="og:image"
 			content="{{ get_url(path='images/icon-512.png') }}"
 		/>
-		{%- endblock %}
-
+		{%- endblock %} {% if lang == "en" -%} {%- set rss = "atom.xml" -%} {%-
+		else -%} {%- set rss = "cs/atom.xml" -%} {%- endif -%}
+		<link
+			rel="alternate"
+			type="application/atom+xml"
+			href="{{ get_url(path = rss) }}"
+		/>
+		<link
+			rel="alternate"
+			hreflang="en"
+			href="{{ l10n::current_url(l = 'en') }}"
+		/>
+		<link
+			rel="alternate"
+			hreflang="cs"
+			href="{{ l10n::current_url(l = 'cs') }}"
+		/>
 		<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}" />
 		<link rel="icon" href="{{ get_url(path='images/icon.svg') }}" />
 		<link rel="stylesheet" href="https://pervoj.cz/nuclear/nuclear.css" />

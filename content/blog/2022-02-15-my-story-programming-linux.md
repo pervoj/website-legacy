@@ -4,7 +4,7 @@ title = "How I got into programming and Linux"
 date = "2022-02-15"
 
 [extra]
-image = "images/posts/tux.svg"
+image = "images/posts/tux.png"
 +++
 
 # 2014 and 2015
@@ -17,7 +17,7 @@ But the year 2015 chanded everything. I got a book about Scratch for my 9th birt
 
 The year 2020 was amazing. A lot happened in this pandemic-tainted year. At the beginning of this year I didn't go to school due to illness and I was bored. So I thought I might give programming a second chance and I started learning Java again. I read all the lessons carefully and everything miraculously worked. I was really happy and it motivated me so much that I learned a lot of things in that year and even switched to Linux.
 
-In the spring, when I was reading something on the internet, I read about Linux. Dad told me more about it *(he is still on Windows, but he use Linux server at the work)* and I was really excited. I started looking for materials and figuring out how to install Linux Mint.
+In the spring, when I was reading something on the internet, I read about Linux. Dad told me more about it _(he is still on Windows, but he use Linux server at the work)_ and I was really excited. I started looking for materials and figuring out how to install Linux Mint.
 
 In September I was done and I decided to delete Windows and go to Mint. I lasted almost a year with Mint, in May 2021 I switched to Fedora. But I'm getting ahead of myself.
 
@@ -27,7 +27,7 @@ Over time, I became interested in the GTK apps and I wanted to know how are they
 
 Vala had a similar syntax to Java, so I started learning it. Gradually, I started to get into it. I started to love GTK. I even decided to switch to GNOME because of GTK.
 
-I didn't want Ubuntu besause of its modifications. I wanted pure GNOME. I was familiar with APT, so I was searching for some Debian based distro with GNOME and I found Pop!_OS. Unfortunately, before I could switch to Pop!_OS, they announced that they will now use their own DE called Cosmic instead of GNOME.
+I didn't want Ubuntu besause of its modifications. I wanted pure GNOME. I was familiar with APT, so I was searching for some Debian based distro with GNOME and I found Pop!\_OS. Unfortunately, before I could switch to Pop!\_OS, they announced that they will now use their own DE called Cosmic instead of GNOME.
 
 So in May I decided to switch to Fedora. It wasn't based on APT, but I figured I'd at least learn something new. I also started learning JavaScript and Python on Fedora.
 

@@ -4,7 +4,7 @@ title = "Jak jsem se dostal k programování a Linuxu"
 date = "2022-02-15"
 
 [extra]
-image = "images/posts/tux.svg"
+image = "images/posts/tux.png"
 +++
 
 # 2014 a 2015
@@ -17,7 +17,7 @@ Rok 2015 ale všechno změnil. Ke svým 9. narozeninám jsem totiž dostal knihu
 
 Rok 2020 byl skvělý. V tomto pandemií poznamenaném roce se toho stalo opravdu hodně. Na zažátku roku jsem kvůli nemoci nešel do školy a doma jsem se nudil. Řekl jsem si tedy, že bych mohl programování dát druhou šanci a začal jsem se Javu učit znovu. Celý kurz jsem poctivě přečetl a vše mi zázračně fungovalo. Byl jsem opravdu šťastný a motivovalo mě to tak moc, že jsem se ten rok toho naučil opravdu hodně a dokonce přešel na Linux.
 
-Na jaře, když jsem zrovna něco četl na internetu, jsem se dočetl o Linuxu. Taťka mi o něm řekl víc *(stále je na Windows, ale v práci používá Linuxový server)* a já byl vážně nadšený. Začal jsem hledat další materiály a postupně zjišťovat, jak nainstalovat Linux Mint.
+Na jaře, když jsem zrovna něco četl na internetu, jsem se dočetl o Linuxu. Taťka mi o něm řekl víc _(stále je na Windows, ale v práci používá Linuxový server)_ a já byl vážně nadšený. Začal jsem hledat další materiály a postupně zjišťovat, jak nainstalovat Linux Mint.
 
 V září jsem byl konečně připravený a rozhodl jsem se zahodit Windows a přejít na Mint. S Mintem jsem vydržel skoro rok. V květnu 2021 jsem ho totiž vyměnil za Fedoru. Ale to trochu předbíhám.
 
@@ -27,7 +27,7 @@ Postupně mě začínaly zajímat GTK aplikace a chtěl jsem se dozvědět, jak 
 
 Vala měla syntaxi podobnou Javě, takže jsem se ji začal učit a postupně jsem se do ní dostával. GTK jsem začal milovat. Kvůli němu jsem se také rozhodl přejít na GNOME.
 
-Ubuntu jsem kvůli jeho modifikacím nechtěl. Chtěl jsem čisté GNOME. Uměl jsem s APTem, takže jsem hledal nějakou distribuci s GNOME založenou na Debianu a narazil jsem na Pop!_OS. Bohužel ještě před tím, než jsem měl možnost na něj přejít, jeho vývojáři oznámili, že GNOME vymění za své vlastní DE zvané Cosmic.
+Ubuntu jsem kvůli jeho modifikacím nechtěl. Chtěl jsem čisté GNOME. Uměl jsem s APTem, takže jsem hledal nějakou distribuci s GNOME založenou na Debianu a narazil jsem na Pop!\_OS. Bohužel ještě před tím, než jsem měl možnost na něj přejít, jeho vývojáři oznámili, že GNOME vymění za své vlastní DE zvané Cosmic.
 
 V květnu jsem se tedy rozhodl přejít na Fedoru. Ta sice není postavená na APTu, ale řekl jsem si, že se aspoň přiučím něco nového. Na Fedoře jsem se také začal učit JavaScript a Python.
 

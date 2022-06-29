@@ -5,8 +5,9 @@ slugurl: improve-site-with-netlify
 date: 2022-05-25T19:32:08.613Z
 extra:
   description: I just migrated my website to Netlify and here are my thougts.
-  image: /images/posts/netlify.svg
+  image: /images/posts/netlify.png
 ---
+
 For a long time I used GitHub Pages to host my websites and I was relatively satisfied with it. Then, when I found Netlify, I just wanted to give it a try. So I tried to deploy this website there. And it was... surprisingly easy and fast. I am using [Zola](https://www.getzola.org/) to build this site. With GitHub Pages you need to setup GitHub Action for building your site, because it doesn't have Zola installed by default. I had also problems with the existing Zola actions so I had to make my own. It had to download Zola archive from releases, upack it and only then build the site. With Netlify the only thing you need to do is to copy [a few lines from Zola documentation](https://www.getzola.org/documentation/deployment/netlify/) and you are done. Then just commit to the repository and Netlify will build the site for you.
 
 There is also [Netlify CMS](https://www.netlifycms.org/). An open source script in JS that adds a full-fledged CMS to your website. That's a convenience made just for me. Always when I wanted to write new post, I had to clone the whole repository, write the post, commit and push it back. And when I started writing on one computer, I couldn't finish it on another. Netlify CMS solves it. Thanks to its editorial workflow you can save posts as drafts and publish them when they're ready. You can also choose if you want to use their nice WYSIWYG editor or write markdown directly.
@@ -45,17 +46,17 @@ Add `admin` directory into your `static/` (if you are using Zola). In this direc
 The content of `index.html` is simple:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
-</head>
-<body>
-  <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  </body>
 </html>
 ```
 
@@ -172,9 +173,9 @@ And this before the closing `</body>` tag, now ONLY to our base template:
 ```html
 <script>
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user) {
+    window.netlifyIdentity.on("init", function (user) {
       if (!user) {
-        window.netlifyIdentity.on("login", function() {
+        window.netlifyIdentity.on("login", function () {
           document.location.href = "/admin/";
         });
       }

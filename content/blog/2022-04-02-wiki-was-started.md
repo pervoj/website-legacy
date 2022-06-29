@@ -4,7 +4,7 @@ title = "New wiki was started!"
 date = "2022-04-02"
 
 [extra]
-image = "images/posts/globe.svg"
+image = "images/posts/globe.png"
 +++
 
 So after some time of work, the wiki is finally done! As I promised in one of the [previous posts](../blog-was-started), it is running on Jekyll and using the same theme as this blog. In this post I want to explain why I decided to start own wiki and what can be found there.

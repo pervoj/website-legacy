@@ -4,7 +4,7 @@ title = "Nová wiki byla spuštěna!"
 date = "2022-04-02"
 
 [extra]
-image = "images/posts/globe.svg"
+image = "images/posts/globe.png"
 +++
 
 Po nějakém čase příprav je wiki konečně hotová! Jak jsem slíbil v jednom z [předchozích příspěvků](../blog-was-started), wiki je postavena na Jekyllu a používá stejné téma jako tento blog. V tomto příspěvku bych chtěl popsat, proč jsem se pro spuštění wiki rozhodl a co tam bude možné najít.

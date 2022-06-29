@@ -5,8 +5,9 @@ slugurl: improve-site-with-netlify
 date: 2022-05-25T19:34:48.938Z
 extra:
   description: Právě jsem přemigroval svůj web na Netlify a tady jsou mé myšlenky.
-  image: /images/posts/netlify.svg
+  image: /images/posts/netlify.png
 ---
+
 Po dlouhou dobu jsem pro hostování svých webů používal GitHub Pages a byl jsem s nimi relativně spokojený. Když jsem potom narazil na Netlify, chtěl jsem ho jen zkusit. Zkusil jsem tam tedy nahrát tento web. A bylo to... překvapivě jednoduché a rychlé. Tato stránka je postavená na generátoru [Zola](https://www.getzola.org/). S GitHub Pages musíte nastavit GitHub Actions, aby stránku na Zole sestavily, protože tam Zola není ve výchozím stavu nainstalována. Já měl také problémy s předdefinovanými akcemi a musel jsem si tedy vytvořit vlastní. Tato akce vždy stáhla archiv Zoly z vydání, rozbalila ho a až poté mohla kompilovat web. Pokud používáte Netlify, to jediné, co musíte udělat, je zkopírovat [pár řádků z dokumentace Zoly](https://www.getzola.org/documentation/deployment/netlify/) a máte hotovo. Pak už jen stačí commitnout do vašeho repozitáře a Netlify za vás web zkompiluje.
 
 Také můžete využít [Netlify CMS](https://www.netlifycms.org/). Open source script v JS, který na váš web přidá plnohodnotný redakční systém. A to je vymoženost pro mě jako dělaná. Pokaždé, když chci napsat nový článek, musím naklonovat celý repozitář, napsat článek, commitnout a pushnout commit zpět na GitHub. A když začnu psát na jednom počítači, nemůžu článek dokončit na jiném. Netlify CMS právě tohle řeší. Díky jeho funkci zvané editorial workflow můžete články uložit jako koncepty a publikovat je až ve chvíli, kdy jsou hotové. Můžete si také vybrat, jestli chcete používat jejich pěkný WYSIWYG editor, nebo psát přímo markdown.
@@ -45,17 +46,17 @@ V adresáři `static/` (pokud používáte Zolu) vytvořte nový adresář `admi
 Obsah souboru `index.html` je jednoduchý:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
-</head>
-<body>
-  <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  </body>
 </html>
 ```
 
@@ -86,9 +87,9 @@ media_folder: "static/images/posts"
 public_folder: "/images/posts"
 ```
 
-A nyní přichází to největší kouzlo. Kolekce. Kolekce definují seznam elementů formuláře v grafickém rozhraní CMS, které budou převedeny do *front matter* vašich příspěvků.
+A nyní přichází to největší kouzlo. Kolekce. Kolekce definují seznam elementů formuláře v grafickém rozhraní CMS, které budou převedeny do _front matter_ vašich příspěvků.
 
-Pokud tedy vaše *front matter* vypadá takto:
+Pokud tedy vaše _front matter_ vypadá takto:
 
 ```toml
 +++
@@ -116,7 +117,12 @@ collections:
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Obrázek", name: "image", widget: "image", required: false }
+          - {
+              label: "Obrázek",
+              name: "image",
+              widget: "image",
+              required: false,
+            }
       - { label: "Obsah článku", name: "body", widget: "markdown" }
 ```
 
@@ -147,7 +153,12 @@ collections:
         name: "extra"
         widget: "object"
         fields:
-          - { label: "Obrázek", name: "image", widget: "image", required: false }
+          - {
+              label: "Obrázek",
+              name: "image",
+              widget: "image",
+              required: false,
+            }
       - { label: "Obsah článku", name: "body", widget: "markdown" }
 ```
 
@@ -161,20 +172,20 @@ Abychom mohli CMS využívat, potřebujeme se nějak přihlásit. K tomu použij
 4. Sescrollujte dolů k **Services** → **Git Gateway** a klikněte na **Enable Git Gateway**.
 5. Nyní v horním menu vyberte **Identity** a pošlete si pozvánku na email, který je propojený s GitHubem, nebo vaším účtem Netlify.
 
-Poslední věcí, kterou musíme udělat, je přídání tohoto řádku do `<head>` každé stránky a příspěvku (prostě šablony *base*) a také `index.html` našeho CMS:
+Poslední věcí, kterou musíme udělat, je přídání tohoto řádku do `<head>` každé stránky a příspěvku (prostě šablony _base_) a také `index.html` našeho CMS:
 
 ```html
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 ```
 
-A tohoto před uzavírací tak `</body>`, nyní POUZE naší šablony *base*:
+A tohoto před uzavírací tak `</body>`, nyní POUZE naší šablony _base_:
 
 ```html
 <script>
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user) {
+    window.netlifyIdentity.on("init", function (user) {
       if (!user) {
-        window.netlifyIdentity.on("login", function() {
+        window.netlifyIdentity.on("login", function () {
           document.location.href = "/admin/";
         });
       }

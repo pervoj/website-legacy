@@ -1,12 +1,12 @@
----
-lang: cs
-title: Jak vylepšit váš web s Netlify
-slugurl: improve-site-with-netlify
-date: 2022-05-25T19:34:48.938Z
-extra:
-  description: Právě jsem přemigroval svůj web na Netlify a tady jsou mé myšlenky.
-  image: /images/posts/netlify.png
----
++++
+lang = "cs"
+title = "Jak vylepšit váš web s Netlify"
+date = "2022-05-25"
+
+[extra]
+description = "Právě jsem přemigroval svůj web na Netlify a tady jsou mé myšlenky."
+image = "images/posts/netlify.png"
++++
 
 Po dlouhou dobu jsem pro hostování svých webů používal GitHub Pages a byl jsem s nimi relativně spokojený. Když jsem potom narazil na Netlify, chtěl jsem ho jen zkusit. Zkusil jsem tam tedy nahrát tento web. A bylo to... překvapivě jednoduché a rychlé. Tato stránka je postavená na generátoru [Zola](https://www.getzola.org/). S GitHub Pages musíte nastavit GitHub Actions, aby stránku na Zole sestavily, protože tam Zola není ve výchozím stavu nainstalována. Já měl také problémy s předdefinovanými akcemi a musel jsem si tedy vytvořit vlastní. Tato akce vždy stáhla archiv Zoly z vydání, rozbalila ho a až poté mohla kompilovat web. Pokud používáte Netlify, to jediné, co musíte udělat, je zkopírovat [pár řádků z dokumentace Zoly](https://www.getzola.org/documentation/deployment/netlify/) a máte hotovo. Pak už jen stačí commitnout do vašeho repozitáře a Netlify za vás web zkompiluje.
 

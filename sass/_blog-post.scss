@@ -1,5 +1,5 @@
 .blog-post-header {
-	--image: url('/images/post-no-image.svg');
+	--image: url("/images/post-no-image.svg");
 	background: var(--image);
 	background-position: center;
 	background-size: cover;
@@ -12,7 +12,9 @@
 	margin-block-end: 2rem;
 
 	border-radius: 0.8rem;
-	box-shadow: 0 0 0.5rem rgba(0,0,0,.7);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7);
+
+	position: relative;
 
 	.blog-title {
 		border-radius: inherit;
@@ -20,9 +22,33 @@
 
 		h1 {
 			font-size: 2.5rem;
-			margin-bottom: 0.2rem;
+			margin-block-end: 0.2rem;
 		}
 
-		time { font-size: 0.8rem; }
+		time {
+			position: absolute;
+			display: block;
+			inset-block-start: 0.8rem;
+			inset-inline-end: 1rem;
+			padding: 0.1rem 0.5rem;
+			border-radius: 100vmax;
+			font-size: 0.8rem;
+			isolation: isolate;
+			box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.4);
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				border-radius: inherit;
+				background-color: var(--clr-accent-primary);
+				z-index: -1;
+				opacity: 0.6;
+			}
+		}
+
+		p {
+			margin-block: 0;
+		}
 	}
 }

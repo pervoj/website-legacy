@@ -24,6 +24,7 @@ replace(from="static/", to="") -%} {%- set imageUrl = get_url(path = imagePath)
 			<time datetime="{{ page.date }}">
 				{{ page.date | date(format = l10n::get(key = 'date')) }}
 			</time>
+			<p>{{ page.extra.description | default(value = '') }}</p>
 		</div>
 	</section>
 

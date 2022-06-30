@@ -54,11 +54,10 @@
 
 		<script>
 			// https://counter.dev/
+			const origin = location.protocol + "//" + location.host;
 			if (
 				!sessionStorage.getItem("_swa") &&
-				document.referrer.indexOf(
-					location.protocol + "//" + location.host
-				) !== 0
+				document.referrer.indexOf(origin) !== 0
 			) {
 				fetch(
 					"https://counter.dev/track?" +
@@ -67,7 +66,10 @@
 							screen: screen.width + "x" + screen.height,
 							user: "pervoj",
 							utcoffset: "2",
-						})
+						}),
+					{
+						headers: { Origin: origin },
+					}
 				);
 			}
 			sessionStorage.setItem("_swa", "1");

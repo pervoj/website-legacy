@@ -52,6 +52,7 @@ hp_photo_alt = "photo"
 hp_shape_alt = "shape in background"
 
 blog_posts = "Posts"
+blog_comments_title = "Comments"
 
 
 [extra.l10n.cs]
@@ -72,3 +73,4 @@ hp_photo_alt = "fotka"
 hp_shape_alt = "tvar na pozadí"
 
 blog_posts = "Příspěvky"
+blog_comments_title = "Komentáře"

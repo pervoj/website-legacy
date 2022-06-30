@@ -52,6 +52,27 @@
 
 		<script src="https://pervoj.cz/nuclear/nuclear.js" async></script>
 
+		<script>
+			// https://counter.dev/
+			if (
+				!sessionStorage.getItem("_swa") &&
+				document.referrer.indexOf(
+					location.protocol + "//" + location.host
+				) !== 0
+			) {
+				fetch(
+					"https://counter.dev/track?" +
+						new URLSearchParams({
+							referrer: document.referrer,
+							screen: screen.width + "x" + screen.height,
+							user: "pervoj",
+							utcoffset: "2",
+						})
+				);
+			}
+			sessionStorage.setItem("_swa", "1");
+		</script>
+
 		<title>
 			{%- if page.title -%} {{ page.title }} – {%- elif section.title -%}
 			{{ section.title }} – {%- endif %} pervoj

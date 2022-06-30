@@ -1,5 +1,4 @@
 +++
-lang = "cs"
 title = "Zcelá nová CSS knihovna"
 date = "2022-04-20"
 

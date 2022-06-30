@@ -1,5 +1,4 @@
 +++
-lang = "cs"
 title = "Kompletní redesign webu"
 date = "2022-05-23"
 

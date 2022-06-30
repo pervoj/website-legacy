@@ -1,5 +1,4 @@
 +++
-lang = "cs"
 title = "Blog byl spuštěn!"
 date = "2022-02-04"
 

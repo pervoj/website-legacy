@@ -1,5 +1,4 @@
 +++
-lang = "en"
 title = "How to improve your site with Netlify"
 date = "2022-05-25"
 

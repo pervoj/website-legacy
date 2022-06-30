@@ -1,5 +1,4 @@
 +++
-lang = "en"
 title = "New wiki was started!"
 date = "2022-04-02"
 

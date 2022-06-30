@@ -1,6 +1,5 @@
 +++
 title = "How to improve your site with Netlify"
-date = "2022-05-25"
 
 [extra]
 description = "I just migrated my website to Netlify and here are my thougts."

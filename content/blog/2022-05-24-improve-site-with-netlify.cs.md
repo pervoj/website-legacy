@@ -1,6 +1,5 @@
 +++
 title = "Jak vylepšit váš web s Netlify"
-date = "2022-05-25"
 
 [extra]
 description = "Právě jsem přemigroval svůj web na Netlify a tady jsou mé myšlenky."

@@ -1,6 +1,5 @@
 +++
 title = "How I got into programming and Linux"
-date = "2022-02-15"
 
 [extra]
 image = "images/posts/tux.png"

@@ -1,6 +1,5 @@
 +++
 title = "Blog was started!"
-date = "2022-02-04"
 
 [extra]
 image = "images/posts/tada.png"

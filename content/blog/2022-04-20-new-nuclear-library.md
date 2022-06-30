@@ -1,6 +1,5 @@
 +++
 title = "Brand new CSS library"
-date = "2022-04-20"
 
 [extra]
 image = "images/posts/nuclear.png"

@@ -1,6 +1,5 @@
 +++
 title = "Kompletní redesign webu"
-date = "2022-05-23"
 
 [extra]
 image = "images/posts/celebration.jpg"

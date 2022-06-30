@@ -30,8 +30,6 @@ replace(from="static/", to="") -%} {%- set imageUrl = get_url(path = imagePath)
 
 	<article>{{ page.content | safe }}</article>
 
-	<h2>{{ l10n::get(key = 'blog_comments_title') }}</h2>
-
 	<script
 		src="https://utteranc.es/client.js"
 		repo="pervoj/pervoj.github.io"

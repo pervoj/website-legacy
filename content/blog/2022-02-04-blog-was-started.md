@@ -17,7 +17,7 @@ Whole blog is based on [Jekyll](https://jekyllrb.com/) and uses my own theme. In
 
 ---
 
-# Page theme sample
+## Page theme sample
 
 I use the same sample text that GitHub uses to demonstrate its themes.
 

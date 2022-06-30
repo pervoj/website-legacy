@@ -17,7 +17,7 @@ Celý blog je postavený na projektu [Jekyll](https://jekyllrb.com/) a použív�
 
 ---
 
-# Ukázka designu stránky
+## Ukázka designu stránky
 
 Používám stejný ukázkový text, jako používá GitHub v demonstracích jejich
 témat.

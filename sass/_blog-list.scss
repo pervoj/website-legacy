@@ -7,14 +7,13 @@
 	}
 }
 
-
 .blog-list-post {
 	--image: var(--clr-accent-primary);
 	background: var(--image);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	opacity: 0.85;
+	opacity: 0.95;
 
 	aspect-ratio: 16 / 9;
 	position: relative;
@@ -22,7 +21,9 @@
 	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7);
 	transition: opacity 0.2s ease;
 
-	&:hover { opacity: 1; }
+	&:hover {
+		opacity: 1;
+	}
 
 	> * {
 		position: absolute;
@@ -38,6 +39,8 @@
 			margin-bottom: 0.2rem;
 		}
 
-		time { font-size: 0.8rem; }
+		time {
+			font-size: 0.8rem;
+		}
 	}
 }

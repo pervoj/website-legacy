@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="description" content="Uživatel, vývojář a překladatel FOSS" />
+		<meta name="author" content="Vojtěch Perník" />
+		<meta
+			name="keywords"
+			content="Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development"
+		/>
+
+		 <meta property="og:title" content="Nový web pro jazyk Vala" />
+<meta
+	property="og:description"
+	content="Pracujeme na nové webové stránce pro programovací jazyk Vala."
+/>
+<meta property="og:image" content="https:&#x2F;&#x2F;pervoj.cz&#x2F;images&#x2F;posts&#x2F;vala.png" />
+<meta property="og:locale" content="cs" />
+<meta property="og:type" content="article" />
+
+ <link
+			rel="alternate"
+			type="application/atom+xml"
+			href="https://pervoj.cz/cs/atom.xml"
+		/>
+		<link
+			rel="alternate"
+			hreflang="en"
+			href="https://pervoj.cz/blog/new-vala-website"
+		/>
+		<link
+			rel="alternate"
+			hreflang="cs"
+			href="https://pervoj.cz/cs/blog/new-vala-website"
+		/>
+		<link rel="manifest" href="https://pervoj.cz/site.webmanifest" />
+		<link rel="icon" href="https://pervoj.cz/images/icon.svg" />
+		<link rel="stylesheet" href="https://pervoj.cz/nuclear/nuclear.css" />
+		<link rel="stylesheet" href="https://pervoj.cz/styles.css" />
+
+		<script src="https://pervoj.cz/nuclear/nuclear.js" async></script>
+
+		<title>Nový web pro jazyk Vala – pervoj
+		</title>
+	</head>
+	<body>
+		<a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+		<nav class="navbar">
+	<a href="https://pervoj.cz/cs" class="logo" aria-label="pervoj"></a>
+
+	<ul class="links">
+		<li class="space"></li>
+		<li><a href="https://pervoj.cz/cs"><i class="fa-solid fa-house"></i>&ensp;Domů</a></li>
+		<li><a href="https://pervoj.cz/cs/contact"><i class="fa-solid fa-address-book"></i>&ensp;Kontakt</a></li>
+		<li><a href="https://pervoj.cz/cs/blog"><i class="fa-solid fa-blog"></i>&ensp;Blog</a></li>
+		<li class="space"></li>
+		<li class="btns">
+			<a href="https://pervoj.cz/blog/new-vala-website">en</a>
+			<a href="https://pervoj.cz/cs/blog/new-vala-website">cs</a>
+		</li>
+		<li class="btns">
+			<a href="https://pervoj.cz/cs/support" class="btn outline accent-light">
+				<i class="fa-solid fa-heart"></i>&ensp;Podpořit mě
+			</a>
+			<a href="https://pervoj.cz/cs/contact" class="btn accent-primary">
+				<i class="fa-solid fa-handshake"></i>&ensp;Najmout mě
+			</a>
+		</li>
+	</ul>
+
+	<button class="toggler borderless empty" aria-label="Přepnout menu">
+		<span class="hamburger"></span>
+	</button>
+</nav>
+ 
+
+<main id="main-content" class="container"><section class="blog-post-header" style="--image: url('images&#x2F;posts&#x2F;vala.png')">
+		<div class="blog-title">
+			<h1>Nový web pro jazyk Vala</h1>
+			<time datetime="2022-07-01">
+				 1.  7. 2022
+			</time>
+			<p>Pracujeme na nové webové stránce pro programovací jazyk Vala.</p>
+		</div>
+	</section>
+
+	<article><p>Jazyk Vala jsem objevil v roce 2020, když jsem hledal nějaký vhodný jazyk na tvorbu GTK aplikací podobný Javě. Už po prvních chvílích používání jsem byl z tohoto jazyka nadšený. Jeho skvělá integrace se systémem GObject zajišťuje pohodlné používání komponent knihoven GLib a GTK. Na rozdíl od jazyků jako C nebo Rust je zde GObject používán jako nativní typový systém.</p>
+<p>I přes všechny jeho výhody ovšem jazyk není příliš populární. Jedním z důvodů je samozřejmě jeho závislost na GObjectu a tudíž i limitace pro použití jen v určitých projektech, nejčastěji aplikacích pro Linux. To ovšem není jediný důvod. Vala totiž ztrácí na popularitě i v projektu GNOME.</p>
+<p>Prvním důvodem je určitě chybějící nebo alespoň pro začátečníky nepříliš jednoduchá dokumentace. A dokumentací teď nemyslím popis API, jako třeba <a href="https://valadoc.org/">Valadoc</a>, ale spíše nějaký lidsky psaný manuál. Pro nováčky je tedy těžší s jazykem začít. Dalším z důvodů je malý počet vývojářů (konkrétně jeden, který projekt aktivně udržuje). Vývoj jazyka je tedy pomalý, opravy chyb trvají dlouho a nové funkce nepřibývají moc často. A potom nedostatek vývojářských nástrojů, které by programátorovi usnadnily práci. Ať už jde o linter nebo správce projektů / závislostí.</p>
+<p>Jazyk tedy moc nových uživatelů nezískává a o ty současné postupně přichází. Při životě ho drží hlavně projekt <a href="https://elementary.io/">elementary OS</a>, který na Valu vsadil jako klíč ke svému úspěchu a nyní jsou v tomto jazyce napsány všechny jeho součásti. Dále pak určitě aplikace, které jsou v jazyce již napsány a jejichž vývojářům se nechce je přepisovat. A nakonec lidé, kteří mají jazyk rádi a dobrovolně u něj zůstávají. A právě tito lidé se rozhodli vzít situaci do vlastních rukou, postupně vše napravit a navrátit jazyku jeho bývalou popularitu.</p>
+<p>Projektem, který z tohoto důvodu vznikl, je nová <a href="https://vala.dev/">webová stránka jazyka</a> společně s <a href="https://lwildberg.pages.gitlab.gnome.org/vala-tutorial/">uživatelským manuálem</a>. Pracovat na projektu začal už v březnu 2021 <a href="https://github.com/nahuelwexd">Nahuel Gomez Castro</a>, ale větší zájem o něj se projevil až v dubnu 2022. Projektu se ujal <a href="https://github.com/colinkiama">Colin Kiama</a> a, jak je vidět i na grafu aktivity, projekt se opravdu „rozjel“.</p>
+<p><img src="/images/posts/new-vala-website/activity.png" alt="aktivita projektu" /></p>
+<p>Do projektu přispěli i další lidé, jako např. <a href="https://github.com/Suzie97">Rajdeep Singha</a>, <a href="https://github.com/lw64">Lorenz Wildberg</a>, <a href="https://github.com/dar5hak">Darshak Parikh</a>, <a href="https://github.com/Marki2019">Marki</a> a já. Dále poté <a href="https://github.com/benwaffle">Ben Iofel</a> a <a href="https://github.com/Prince781">Princeton Ferro</a>, kteří koupili domény.</p>
+<p>Společně s projektem webové stránky jazyka začal Lorenz Wildberg pracovat také na uživatelském manuálu, který obsahuje i na kapitoly rozdělené návody, a podpoře jazyka v aplikaci <a href="https://flathub.org/apps/details/re.sonny.Workbench">Workbench</a> od <a href="https://github.com/sonnyp">Sonnyho Pierse</a>. Nováčci tedy nyní mají možnost jednoduše se jazyk naučit a vše si pohodlně vyzkoušet bez nutnosti instalace velkého množství nástrojů.</p>
+<p>Cílem těchto kroků je přilákat k jazyku další uživatele, kteří by v něm vyvíjeli své aplikace a případně i přispívali do samotného jazyka.</p>
+<p>Konečné oficiální vydání webu je naplánováno na <a href="https://gitlab.gnome.org/GNOME/vala/-/commit/68986811db7b23c1c3b652cbee34fd45c62c2c6e">15. července</a>. Na 22. července je naplánována <a href="https://events.gnome.org/event/77/contributions/298/">přednáška</a> na letošní konferenci GUADEC, kterou povede Princeton Ferro. Pokud jste se tedy na GUADEC ještě nezaregistrovali, nezapomeňte <a href="https://events.gnome.org/event/77/registrations/44/">to udělat</a>.</p>
+</article>
+
+	<script
+		src="https://utteranc.es/client.js"
+		repo="pervoj/pervoj.github.io"
+		issue-term="new-vala-website"
+		label="comment"
+		theme="preferred-color-scheme"
+		crossorigin="anonymous"
+		async
+	></script>
+</main>
+
+<footer class="footer"><p>&copy; <span class="year">2022</span> Vojtěch Perník</p>
+</footer>
+
+
+	</body>
+</html>

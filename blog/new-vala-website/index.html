@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="description" content="FOSS user, developer and translator" />
+		<meta name="author" content="Vojtěch Perník" />
+		<meta
+			name="keywords"
+			content="Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development"
+		/>
+
+		 <meta property="og:title" content="New website for Vala" />
+<meta
+	property="og:description"
+	content="We are working on a new website for the Vala programming language."
+/>
+<meta property="og:image" content="https:&#x2F;&#x2F;pervoj.cz&#x2F;images&#x2F;posts&#x2F;vala.png" />
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+
+ <link
+			rel="alternate"
+			type="application/atom+xml"
+			href="https://pervoj.cz/atom.xml"
+		/>
+		<link
+			rel="alternate"
+			hreflang="en"
+			href="https://pervoj.cz/blog/new-vala-website"
+		/>
+		<link
+			rel="alternate"
+			hreflang="cs"
+			href="https://pervoj.cz/cs/blog/new-vala-website"
+		/>
+		<link rel="manifest" href="https://pervoj.cz/site.webmanifest" />
+		<link rel="icon" href="https://pervoj.cz/images/icon.svg" />
+		<link rel="stylesheet" href="https://pervoj.cz/nuclear/nuclear.css" />
+		<link rel="stylesheet" href="https://pervoj.cz/styles.css" />
+
+		<script src="https://pervoj.cz/nuclear/nuclear.js" async></script>
+
+		<title>New website for Vala – pervoj
+		</title>
+	</head>
+	<body>
+		<a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+		<nav class="navbar">
+	<a href="https://pervoj.cz" class="logo" aria-label="pervoj"></a>
+
+	<ul class="links">
+		<li class="space"></li>
+		<li><a href="https://pervoj.cz"><i class="fa-solid fa-house"></i>&ensp;Home</a></li>
+		<li><a href="https://pervoj.cz/contact"><i class="fa-solid fa-address-book"></i>&ensp;Contact</a></li>
+		<li><a href="https://pervoj.cz/blog"><i class="fa-solid fa-blog"></i>&ensp;Blog</a></li>
+		<li class="space"></li>
+		<li class="btns">
+			<a href="https://pervoj.cz/blog/new-vala-website">en</a>
+			<a href="https://pervoj.cz/cs/blog/new-vala-website">cs</a>
+		</li>
+		<li class="btns">
+			<a href="https://pervoj.cz/support" class="btn outline accent-light">
+				<i class="fa-solid fa-heart"></i>&ensp;Support Me
+			</a>
+			<a href="https://pervoj.cz/contact" class="btn accent-primary">
+				<i class="fa-solid fa-handshake"></i>&ensp;Hire Me
+			</a>
+		</li>
+	</ul>
+
+	<button class="toggler borderless empty" aria-label="Toggle Menu">
+		<span class="hamburger"></span>
+	</button>
+</nav>
+ 
+
+<main id="main-content" class="container"><section class="blog-post-header" style="--image: url('images&#x2F;posts&#x2F;vala.png')">
+		<div class="blog-title">
+			<h1>New website for Vala</h1>
+			<time datetime="2022-07-01">
+				July  1, 2022
+			</time>
+			<p>We are working on a new website for the Vala programming language.</p>
+		</div>
+	</section>
+
+	<article><p>I found Vala in 2020 when I was searching for some great language to make GTK apps similar to Java. After the first few moments of use I was already excited about this language. Its great integration with the GObject system ensures convenient way to use the components of GLib and GTK libraries. Unlike languages like C or Rust, GObject is here used as a native type system.</p>
+<p>But despite all its advantages, the language is not very popular. One of the reasons is of course its dependency on GObject and therefore its limitation for use only in certain projects, mostly Linux applications. But that's not the only reason, because Vala is also losing its popularity in the GNOME project.</p>
+<p>The first reason is definitely missing or at least for beginners not very simple documentation. And by documentation I don't mean an API description like <a href="https://valadoc.org/">Valadoc</a>, but rather some humanly written manual. This makes it harder for newcomers to get started with the language. Another reason is the small number of developers (specifically one who actively maintains the project). This makes the language development slow, bug fixes take a long time and new features are not added very often. And then a lack of a developer tooling, that would make the programmer's job easier. Whether it's a linter or a project / dependency manager.</p>
+<p>The language is therefore not gaining many new users and is gradually losing its current ones. The main thing that keeps it alive is the <a href="https://elementary.io/">elementary OS</a> project, which relied on Vala as the key to its success, and now all its components are written in this language. Next, definitely the applications, which are already written in Vala and whose developers don't want to rewrite them. And finally, people who love the language and voluntarily stay with it. And it was these people who decided to take the situation into their own hands, gradually put things right and restore the language to its former popularity.</p>
+<p>The resulting project is a new <a href="https://vala.dev/">language website</a> together with a <a href="https://lwildberg.pages.gitlab.gnome.org/vala-tutorial/">user manual</a>. Work on the project began in March 2021 <a href="https://github.com/nahuelwexd">Nahuel Gomez Castro</a>, but it wasn't until April 2022 that more interest was shown. The project was taken by <a href="https://github.com/colinkiama">Colin Kiama</a> and, as you can see from the activity graph, the project has really taken off.</p>
+<p><img src="/images/posts/new-vala-website/activity.png" alt="the project activity" /></p>
+<p>Other people contributed to the project, such as <a href="https://github.com/Suzie97">Rajdeep Singha</a>, <a href="https://github.com/lw64">Lorenz Wildberg</a>, <a href="https://github.com/dar5hak">Darshak Parikh</a>, <a href="https://github.com/Marki2019">Marki</a> and myself. Then also <a href="https://github.com/benwaffle">Ben Iofel</a> and <a href="https://github.com/Prince781">Princeton Ferro</a>, who bought the domains.</p>
+<p>Along with the language website project, Lorenz Wildberg also started working on a user manual, which includes chapter-by-chapter tutorials, and language support in <a href="https://github.com/sonnyp">Sonny Piers</a>' <a href="https://flathub.org/apps/details/re.sonny.Workbench">Workbench</a> application. Newcomers can now easily learn the language and try everything out comfortably without having to install a large number of tools.</p>
+<p>The aim of these steps is to attract other users to the language to develop their applications in it and possibly contribute to the language itself.</p>
+<p>The final official release of the site is scheduled for <a href="https://gitlab.gnome.org/GNOME/vala/-/commit/68986811db7b23c1c3b652cbee34fd45c62c2c6e">July 15</a>. For July 22 is scheduled a <a href="https://events.gnome.org/event/77/contributions/298/">talk</a> at this year's GUADEC conference, that will be given by Princeton Ferro. So if you haven't registered for GUADEC yet, be sure to <a href="https://events.gnome.org/event/77/registrations/44/">do so</a>.</p>
+</article>
+
+	<script
+		src="https://utteranc.es/client.js"
+		repo="pervoj/pervoj.github.io"
+		issue-term="new-vala-website"
+		label="comment"
+		theme="preferred-color-scheme"
+		crossorigin="anonymous"
+		async
+	></script>
+</main>
+
+<footer class="footer"><p>&copy; <span class="year">2022</span> Vojtěch Perník</p>
+</footer>
+
+
+	</body>
+</html>

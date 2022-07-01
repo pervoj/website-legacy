@@ -18,7 +18,7 @@ The resulting project is a new [language website](https://vala.dev/) together wi
 
 ![the project activity](/images/posts/new-vala-website/activity.png)
 
-Other people contributed to the project, such as [Lorenz Wildberg](https://github.com/lw64), [Darshak Parikh](https://github.com/dar5hak), [Marki](https://github.com/Marki2019) and myself. Then also [Ben Iofel](https://github.com/benwaffle) and [Princeton Ferro](https://github.com/Prince781), who bought the domains.
+Other people contributed to the project, such as [Rajdeep Singha](https://github.com/Suzie97), [Lorenz Wildberg](https://github.com/lw64), [Darshak Parikh](https://github.com/dar5hak), [Marki](https://github.com/Marki2019) and myself. Then also [Ben Iofel](https://github.com/benwaffle) and [Princeton Ferro](https://github.com/Prince781), who bought the domains.
 
 Along with the language website project, Lorenz Wildberg also started working on a user manual, which includes chapter-by-chapter tutorials, and language support in [Sonny Piers](https://github.com/sonnyp)' [Workbench](https://flathub.org/apps/details/re.sonny.Workbench) application. Newcomers can now easily learn the language and try everything out comfortably without having to install a large number of tools.
 

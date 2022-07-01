@@ -18,7 +18,7 @@ Projektem, který z tohoto důvodu vznikl, je nová [webová stránka jazyka](ht
 
 ![aktivita projektu](/images/posts/new-vala-website/activity.png)
 
-Do projektu přispěli i další lidé, jako např. [Lorenz Wildberg](https://github.com/lw64), [Darshak Parikh](https://github.com/dar5hak), [Marki](https://github.com/Marki2019) a já. Dále poté [Ben Iofel](https://github.com/benwaffle) a [Princeton Ferro](https://github.com/Prince781), kteří koupili domény.
+Do projektu přispěli i další lidé, jako např. [Rajdeep Singha](https://github.com/Suzie97), [Lorenz Wildberg](https://github.com/lw64), [Darshak Parikh](https://github.com/dar5hak), [Marki](https://github.com/Marki2019) a já. Dále poté [Ben Iofel](https://github.com/benwaffle) a [Princeton Ferro](https://github.com/Prince781), kteří koupili domény.
 
 Společně s projektem webové stránky jazyka začal Lorenz Wildberg pracovat také na uživatelském manuálu, který obsahuje i na kapitoly rozdělené návody, a podpoře jazyka v aplikaci [Workbench](https://flathub.org/apps/details/re.sonny.Workbench) od [Sonnyho Pierse](https://github.com/sonnyp). Nováčci tedy nyní mají možnost jednoduše se jazyk naučit a vše si pohodlně vyzkoušet bez nutnosti instalace velkého množství nástrojů.
 

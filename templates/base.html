@@ -47,10 +47,13 @@
 		/>
 		<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}" />
 		<link rel="icon" href="{{ get_url(path='images/icon.svg') }}" />
-		<link rel="stylesheet" href="https://pervoj.cz/nuclear/nuclear.css" />
+		<link
+			rel="stylesheet"
+			href="https://pervoj.gitlab.io/nuclear/nuclear.css"
+		/>
 		<link rel="stylesheet" href="{{ get_url(path='styles.css') }}" />
 
-		<script src="https://pervoj.cz/nuclear/nuclear.js" async></script>
+		<script src="https://pervoj.gitlab.io/nuclear/nuclear.js" async></script>
 
 		<title>
 			{%- if page.title -%} {{ page.title }} – {%- elif section.title -%}

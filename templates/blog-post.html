@@ -1,8 +1,12 @@
-{% extends "page.html" %} {% block metatags %} {# it's twice here, but it's the
-best solution for now #} {%- set image = page.extra.image | default(value =
-'images/post-no-image.png') -%} {%- set imagePath = image |
-replace(from="static/", to="") -%} {%- set imageUrl = get_url(path = imagePath)
--%}
+{% extends "base.html" %}
+
+{% block metatags %}
+
+{# it's twice here, but it's the best solution for now #}
+
+{%- set image = page.extra.image | default(value = 'images/post-no-image.png') -%}
+{%- set imagePath = image | replace(from="static/", to="") -%}
+{%- set imageUrl = get_url(path = imagePath) -%}
 
 <meta property="og:title" content="{{ page.title }}" />
 <meta
@@ -13,11 +17,16 @@ replace(from="static/", to="") -%} {%- set imageUrl = get_url(path = imagePath)
 <meta property="og:locale" content="{{ lang }}" />
 <meta property="og:type" content="article" />
 
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
+
+<header class="site-header">
+	{% include "partials/navbar.html" %}
+</header>
 
 <main id="main-content" class="container">
-	{%- set image = page.extra.image | default(value =
-	'/images/post-no-image.png') -%}
+	{%- set image = page.extra.image | default(value = '/images/post-no-image.png') -%}
 	<section class="blog-post-header" style="--image: url('{{ image }}')">
 		<div class="blog-title">
 			<h1>{{ page.title }}</h1>
@@ -29,18 +38,10 @@ replace(from="static/", to="") -%} {%- set imageUrl = get_url(path = imagePath)
 	</section>
 
 	<article>{{ page.content | safe }}</article>
-
-	<script
-		src="https://utteranc.es/client.js"
-		repo="pervoj/pervoj.github.io"
-		issue-term="{{ page.slug }}"
-		label="comment"
-		theme="preferred-color-scheme"
-		crossorigin="anonymous"
-		async
-	></script>
 </main>
 
-<footer class="footer">{% include "partials/footer-content.html" %}</footer>
+<footer class="site-footer">
+	{% include "partials/footer.html" %}
+</footer>
 
 {% endblock %}

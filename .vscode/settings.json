@@ -1,4 +1,5 @@
 {
 	"editor.formatOnSave": false,
-	"cSpell.language": "en,cs"
+	"cSpell.language": "en,cs",
+	"svg.preview.background": "transparent"
 }

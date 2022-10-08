@@ -1,0 +1,12 @@
+.site-footer {
+	background-color: var(--clr-bg-headerbar);
+	color: var(--clr-fg-headerbar);
+	box-shadow: inset 0 1px var(--clr-shade-headerbar);
+	margin-block-start: auto;
+}
+
+.footer {
+	font-size: 0.8em;
+	padding-block: 0.5em;
+	text-align: center;
+}

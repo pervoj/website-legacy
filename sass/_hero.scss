@@ -1,0 +1,20 @@
+.hero {
+	background-image: var(--clr-gradient-accent);
+	color: var(--clr-fg-accent);
+
+	.navbar .logo {
+		color: inherit;
+	}
+
+	.hero-content {
+		padding-block: 3em 4em;
+
+		p {
+			font-size: 1.5em;
+
+			span {
+				font-weight: 800;
+			}
+		}
+	}
+}

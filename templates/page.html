@@ -3,12 +3,16 @@
 
 {% block content %}
 
+<header class="site-header">
+	{% include "partials/navbar.html" %}
+</header>
+
 <main id="main-content" class="container">
 	{{ page.content | safe }}
 </main>
 
-<footer class="footer">
-	{% include "partials/footer-content.html" %}
+<footer class="site-footer">
+	{% include "partials/footer.html" %}
 </footer>
 
 {% endblock %}

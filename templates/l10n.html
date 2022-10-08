@@ -7,7 +7,7 @@ up a key in the config.extra.l10n.lang. #}
 {%- macro url(path) %}{{ get_url(path = path, lang = lang) }}{% endmacro -%}
 
 {%- macro trim_slash(value) -%}
-{{ value | trim_start_matches(pat = "/") | trim_end_matches(pat = "/") }}
+	{{ value | trim_start_matches(pat = '/') | trim_end_matches(pat = '/') }}
 {%- endmacro -%}
 
 {%- macro current_url(l) -%}

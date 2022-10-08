@@ -1,4 +1,4 @@
-{%- import "l10n.html" as l10n -%}
+{%- import 'l10n.html' as l10n -%}
 
 <!DOCTYPE html>
 <html lang="{{ lang }}">
@@ -65,7 +65,9 @@
 		</title>
 	</head>
 	<body>
-		<a href="#main-content" class="skip-to-content">Skip to Content</a>
+		<a href="#main-content" class="skip-to-content">
+			{{ l10n::get(key = 'skip_to_content') }}
+		</a>
 
 		{% block content %}{% endblock %}
 	</body>

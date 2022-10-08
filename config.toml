@@ -40,9 +40,15 @@ date = "%B %_d, %Y"
 
 keywords = "Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development"
 
+skip_to_content = "Skip to Content"
+
+nav_blog = "Blog"
+
+hero_title = "I'm <span>Vojtěch Perník</span>, a young programmer from&nbsp;Czechia."
+hero_socials = "Social Links"
+
 nav_home = "Home"
 nav_contact = "Contact"
-nav_blog = "Blog"
 nav_wiki = "Wiki"
 nav_support = "Support Me"
 nav_hire = "Hire Me"
@@ -63,9 +69,15 @@ date = "%_d. %_m. %Y"
 
 keywords = "Programování, FOSS, OSS, Open Source, Otevřený Software, Software, Linux, GNOME, GTK, Web Development, Vývoj Webu"
 
+skip_to_content = "Přejít k obsahu"
+
+nav_blog = "Blog"
+
+hero_title = "Jsem <span>Vojtěch Perník</span>, mladý programátor z&nbsp;Česka."
+hero_socials = "Odkazy na sociální sítě"
+
 nav_home = "Domů"
 nav_contact = "Kontakt"
-nav_blog = "Blog"
 nav_wiki = "Wiki"
 nav_support = "Podpořit mě"
 nav_hire = "Najmout mě"

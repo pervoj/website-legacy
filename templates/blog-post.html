@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block metatags %}
 
 {# it's twice here, but it's the best solution for now #}
 
 {%- set image = page.extra.image | default(value = 'images/post-no-image.png') -%}
-{%- set imagePath = image | replace(from="static/", to="") -%}
+{%- set imagePath = image | replace(from = 'static/', to = '') -%}
 {%- set imageUrl = get_url(path = imagePath) -%}
 
 <meta property="og:title" content="{{ page.title }}" />
@@ -22,7 +22,7 @@
 {% block content %}
 
 <header class="site-header">
-	{% include "partials/navbar.html" %}
+	{% include 'partials/navbar.html' %}
 </header>
 
 <main id="main-content" class="container">
@@ -41,7 +41,7 @@
 </main>
 
 <footer class="site-footer">
-	{% include "partials/footer.html" %}
+	{% include 'partials/footer.html' %}
 </footer>
 
 {% endblock %}

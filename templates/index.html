@@ -1,23 +1,25 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
 
 <header class="hero">
-	{% include "partials/navbar.html" %}
+	{% include 'partials/navbar.html' %}
 
 	<div class="container hero-content">
 		<h1 class="visually-hidden">Vojtěch Perník</h1>
 
-		<p>I'm <span>Vojtěch Perník</span>, a young programmer from Czechia.</p>
+		<p>{{ l10n::get(key = 'hero_title') }}</p>
+
+		{% include 'home/socials.html' %}
 	</div>
 </header>
 
 <main id="main-content" class="container">
-
+	<p>I'm <strong>Vojtěch Perník</strong>, a young programmer from Czechia, who likes to use a nickname <strong>pervoj</strong>. I can program in Vala, JavaScript, Python, Java and PHP. I love the vision of open source software and also all my projects are open source and can be found on GitLab. I also completely switched to Linux in 2020 and now I am using Fedora.</p>
 </main>
 
 <footer class="site-footer">
-	{% include "partials/footer.html" %}
+	{% include 'partials/footer.html' %}
 </footer>
 
 {% endblock %}

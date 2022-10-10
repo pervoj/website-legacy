@@ -7,26 +7,33 @@
 </header>
 
 <main id="main-content" class="container">
-	<section>{{ section.content | safe }}</section>
+	<header>
+		{{ section.content | safe }}
+	</header>
 
 	<section>
-		<h2>{{ l10n::get(key = 'blog_posts') }}</h2>
 		<div class="blog-list">
-			{% for post in section.pages %}
-				{%- set image = post.extra.image | default(value = '/images/post-no-image.png') -%}
-				<article class="blog-list-post" style="--image: url('{{ image }}')">
-					<div class="blog-title">
-						<h3 class="strong">{{ post.title }}</h3>
-						<time datetime="{{ post.date }}">
-							{{ post.date | date(format = l10n::get(key = 'date')) }}
-						</time>
+			{% for post in section.pages -%}
+				{% set image = post.extra.image | default(value = '/images/post-no-image.png') -%}
+				<article class="card activatable">
+					<img src="{{ get_url(path = image) }}" alt="">
+					<div>
+						<header>
+							<time datetime="{{ post.date }}">
+								{{ post.date | date(format = l10n::get(key = 'date')) }}
+							</time>
+							<h2>{{ post.title }}</h2>
+						</header>
+						{% if post.extra.description -%}
+							<p>{{ post.extra.description }}</p>
+						{%- endif %}
 					</div>
 					<a
 						href="{{ post.permalink }}"
 						aria-label="{{ post.title }}"
 					></a>
 				</article>
-			{% endfor %}
+			{%- endfor %}
 		</div>
 	</section>
 </main>

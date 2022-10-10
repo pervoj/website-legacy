@@ -1,0 +1,128 @@
+main {
+	h1 {
+		font-size: 2em;
+		font-weight: 300;
+		margin-block: 1.2em;
+	}
+
+	h2 {
+		font-size: 1.6em;
+		font-weight: 600;
+		margin-block: 2em 1em;
+	}
+
+	h3 {
+		font-size: 1.4em;
+		font-weight: 600;
+		margin-block: 2.4em 1.2em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+		font-weight: 700;
+		margin-block: 3em 1.5em;
+	}
+
+	h5 {
+		font-size: 1em;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-block: 3.4em 1.6em;
+	}
+
+	h6 {
+		font-size: 1em;
+		font-weight: 700;
+		margin-block: 3.4em 1.6em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2;
+	}
+
+	strong, b {
+		font-weight: 700;
+	}
+
+	a {
+		color: var(--clr-accent);
+
+		&:visited {
+			color: var(--clr-link-visited);
+		}
+
+		&:active {
+			color: var(--clr-destructive);
+		}
+	}
+
+	p, li, pre, dl, dd, table {
+		margin-block: 1em;
+	}
+
+	hr {
+		margin-block: 1.5em;
+		margin-inline: -0.5em;
+		border: none;
+		height: 2px;
+		background-color: currentColor;
+		opacity: 0.6;
+	}
+
+	code {
+		background-color: var(--clr-btn);
+		color: var(--clr-destructive);
+		font-family: monospace;
+		padding-inline: 0.4ch;
+		border-radius: var(--btn-radius);
+	}
+
+	pre {
+		&.z-code {
+			background-color: initial;
+			color: initial;
+		}
+
+		code {
+			background-color: var(--clr-bg-card);
+			color: var(--clr-fg-card);
+			display: block;
+			overflow-x: auto;
+			padding: 0.4em 0.8em;
+			border-radius: 0.8em;
+			box-shadow: var(--shadow);
+
+			* {
+				background-color: transparent !important;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: auto;
+		padding-inline-start: 2em;
+	}
+
+	ul {
+		list-style-type: disc;
+		padding-inline-start: 2em;
+
+		ul {
+			list-style-type: circle;
+
+			ul {
+				list-style-type: square;
+			}
+		}
+	}
+
+	dl {
+		dt {
+			font-weight: 700;
+		}
+
+		dd {
+			padding-inline-start: 2em;
+		}
+	}
+}

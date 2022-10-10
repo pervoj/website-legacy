@@ -1,7 +1,11 @@
 body {
 	margin: 0;
+
 	font-size: 20px;
 	font-family: var(--font);
+	letter-spacing: -0.03em;
+	word-spacing: -0.03em;
+
 	background-color: var(--clr-bg-window);
 	color: var(--clr-fg-window);
 
@@ -36,12 +40,38 @@ main {
 	padding: 0.2em 0.6em;
 	outline: var(--btn-focus) solid var(--clr-focus);
 	outline-offset: calc(-1 * var(--btn-focus));
-	box-shadow: 0 0 0.3em 0.1em var(--clr-shade-card);
+	box-shadow: var(--shadow);
 	margin: 0.8em 1.2em;
 	transform: translateY(-200%);
 	transition: transform 0.2s ease;
 
 	&:focus {
 		transform: none;
+	}
+}
+
+.card {
+	background-color: var(--clr-bg-card);
+	color: var(--clr-fg-card);
+	box-shadow: var(--shadow);
+	border-radius: var(--card-radius);
+	isolation: isolate;
+	position: relative;
+
+	&.activatable {
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-color: currentColor;
+			border-radius: inherit;
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+		}
+
+		&:hover::before {
+			opacity: 0.04;
+		}
 	}
 }

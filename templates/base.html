@@ -22,12 +22,12 @@
 					{{ page.title }} –
 				{%- elif section.title -%}
 					{{ section.title }} –
-				{%- endif %} pervoj"
+				{%- endif %} Vojtěch Perník"
 			/>
 			<!-- FIXME: og image -->
 			<meta
 				property="og:image"
-				content="{{ get_url(path='images/icon-512.png') }}"
+				content="{{ get_url(path = 'images/icon-512.png') }}"
 			/>
 		{%- endblock %}
 
@@ -51,17 +51,17 @@
 			hreflang="cs"
 			href="{{ l10n::current_url(l = 'cs') }}"
 		/>
-		<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}" />
-		<link rel="icon" type="image/svg+xml" href="{{ get_url(path='images/favicon.svg') }}" />
-		<link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico') }}" />
-		<link rel="stylesheet" href="{{ get_url(path='main.css') }}" />
+		<link rel="manifest" href="{{ get_url(path = 'site.webmanifest') }}" />
+		<link rel="icon" type="image/svg+xml" href="{{ get_url(path = 'images/favicon.svg') }}" />
+		<link rel="icon" type="image/x-icon" href="{{ get_url(path = 'favicon.ico') }}" />
+		<link rel="stylesheet" href="{{ get_url(path = 'main.css') }}" />
 
 		<title>
 			{%- if page.title -%}
 				{{ page.title }} –
 			{%- elif section.title -%}
 				{{ section.title }} –
-			{%- endif %} pervoj
+			{%- endif %} Vojtěch Perník
 		</title>
 	</head>
 	<body>

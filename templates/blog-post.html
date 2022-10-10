@@ -25,19 +25,20 @@
 	{% include 'partials/navbar.html' %}
 </header>
 
-<main id="main-content" class="container">
-	{%- set image = page.extra.image | default(value = '/images/post-no-image.png') -%}
-	<section class="blog-post-header" style="--image: url('{{ image }}')">
-		<div class="blog-title">
-			<h1>{{ page.title }}</h1>
-			<time datetime="{{ page.date }}">
-				{{ page.date | date(format = l10n::get(key = 'date')) }}
-			</time>
-			<p>{{ page.extra.description | default(value = '') }}</p>
-		</div>
-	</section>
+{% set image = page.extra.image | default(value = '/images/post-no-image.png') -%}
+<img class="blog-post-image" src="{{ get_url(path = image) }}" alt="">
 
-	<article>{{ page.content | safe }}</article>
+<main id="main-content" class="container">
+	<header class="blog-post-header" style="--image: url('{{ image }}')">
+		<h1>{{ page.title }}</h1>
+		<time datetime="{{ page.date }}">
+			{{ page.date | date(format = l10n::get(key = 'date')) }}
+		</time>
+	</header>
+
+	<article>
+		{{ page.content | safe }}
+	</article>
 </main>
 
 <footer class="site-footer">

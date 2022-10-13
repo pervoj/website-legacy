@@ -98,12 +98,12 @@ main {
 		}
 	}
 
-	ol {
+	ol:not(.list-not-styled) {
 		list-style-type: auto;
 		padding-inline-start: 2em;
 	}
 
-	ul {
+	ul:not(.list-not-styled) {
 		list-style-type: disc;
 		padding-inline-start: 2em;
 
@@ -116,7 +116,7 @@ main {
 		}
 	}
 
-	dl {
+	dl:not(.list-not-styled) {
 		dt {
 			font-weight: 700;
 		}

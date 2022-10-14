@@ -66,14 +66,13 @@
 
 .blog-post-image {
 	width: 100%;
-	height: 25vh;
-	min-height: 200px;
-	max-height: 300px;
+	padding: 0;
+	aspect-ratio: 16 / 9;
 	object-fit: cover;
 }
 
 .blog-post-header {
-	margin-block: 1.2em 2.2em;
+	margin-block: 2.2em;
 	display: flex;
 	flex-direction: column;
 	gap: 1em;

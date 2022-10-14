@@ -38,14 +38,14 @@ main {
 	text-decoration: none;
 	border-radius: var(--btn-radius);
 	padding: 0.2em 0.6em;
-	outline: var(--btn-focus) solid var(--clr-focus);
-	outline-offset: calc(-1 * var(--btn-focus));
 	box-shadow: var(--shadow);
 	margin: 0.8em 1.2em;
 	transform: translateY(-200%);
 	transition: transform 0.2s ease;
 
 	&:focus {
+		outline: var(--btn-focus) solid var(--clr-focus);
+		outline-offset: calc(-1 * var(--btn-focus));
 		transform: none;
 	}
 }

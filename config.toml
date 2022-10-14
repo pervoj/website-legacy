@@ -42,12 +42,16 @@ keywords = "Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, We
 
 skip_to_content = "Skip to Content"
 
+nav_home = "Home"
 nav_blog = "Blog"
+nav_lang = "Language Selection"
 
-hero_title = "I'm <span>Vojtěch Perník</span>, a young programmer from&nbsp;Czechia."
+hero_title = "I'm <span>Vojtěch Perník</span>, a&nbsp;young programmer from&nbsp;Czechia."
 hero_socials = "Social Links"
 
-nav_home = "Home"
+home_projects = "Projects"
+home_projects_text = "Most of my work is GNOME and Linux related and is written in Vala, JavaScript or Python. I love the vision of open source software, so all my projects are open source."
+
 nav_contact = "Contact"
 nav_wiki = "Wiki"
 nav_support = "Support Me"
@@ -71,12 +75,16 @@ keywords = "Programování, FOSS, OSS, Open Source, Otevřený Software, Softwar
 
 skip_to_content = "Přejít k obsahu"
 
+nav_home = "Domů"
 nav_blog = "Blog"
+nav_lang = "Výběr jazyka"
 
 hero_title = "Jsem <span>Vojtěch Perník</span>, mladý programátor z&nbsp;Česka."
 hero_socials = "Odkazy na sociální sítě"
 
-nav_home = "Domů"
+home_projects = "Projekty"
+home_projects_text = "Většina mé práce se týká prostředí GNOME a Linuxu a je napsána v jazyce Vala, JavaScript nebo Python. Mám rád vizi open source softwaru a také všechny mé projekty jsou open source."
+
 nav_contact = "Kontakt"
 nav_wiki = "Wiki"
 nav_support = "Podpořit mě"

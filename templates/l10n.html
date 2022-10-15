@@ -11,11 +11,13 @@ up a key in the config.extra.l10n.lang. #}
 {%- endmacro -%}
 
 {%- macro current_url(l) -%}
-	{%- set path = l10n::trim_slash(value = current_path) -%}
-	{%- if path == lang -%}
-		{%- set path = '' -%}
-	{%- else -%}
-		{%- set path = path | trim_start_matches(pat = lang ~ '/') -%}
+	{%- if current_path -%}
+		{%- set path = l10n::trim_slash(value = current_path) -%}
+		{%- if path == lang -%}
+			{%- set path = '' -%}
+		{%- else -%}
+			{%- set path = path | trim_start_matches(pat = lang ~ '/') -%}
+		{%- endif -%}
+		{{ get_url(path = path, lang = l) }}
 	{%- endif -%}
-	{{ get_url(path = path, lang = l) }}
 {%- endmacro -%}

@@ -58,19 +58,6 @@ home_about_content = "/assets/about.md"
 home_support = "Support Me"
 home_support_text = "Every little donation is very much appreciated. I work on open source software and all my projects are available for free. So if you want to support my work, you can help me using the methods below."
 
-nav_contact = "Contact"
-nav_wiki = "Wiki"
-nav_support = "Support Me"
-nav_hire = "Hire Me"
-nav_toggle = "Toggle Menu"
-
-hp_title = "Simple apps built with passion"
-hp_photo_alt = "photo"
-hp_shape_alt = "shape in background"
-
-blog_posts = "Posts"
-blog_comments_title = "Comments"
-
 
 [extra.l10n.cs]
 
@@ -95,17 +82,3 @@ home_about_content = "/assets/about.cs.md"
 
 home_support = "Podpořit mě"
 home_support_text = "Každého malého příspěvku si velmi vážím. Pracuji na open source softwaru a všechny mé projekty jsou k dispozici zdarma. Pokud tedy chcete podpořit mou práci, můžete mi pomoci níže uvedenými způsoby."
-
-nav_contact = "Kontakt"
-nav_wiki = "Wiki"
-nav_support = "Podpořit mě"
-nav_hire = "Najmout mě"
-nav_toggle = "Přepnout menu"
-
-hp_title = "Jednoduché aplikace vytvořené s vášní"
-hp_description = "Jsem <strong>Vojtěch Perník</strong>, mladý programátor z Česka, který rád používá přezdívku <strong>pervoj</strong>. Umím programovat ve Vale, JavaScriptu, Pythonu, Javě a PHP. Mám rád vizi open source softwaru a také všechny mé projekty jsou open source a jsou k nalezení na GitLabu. V roce 2020 jsem také kompletně přešel na Linux a nyní používám Fedoru."
-hp_photo_alt = "fotka"
-hp_shape_alt = "tvar na pozadí"
-
-blog_posts = "Příspěvky"
-blog_comments_title = "Komentáře"

@@ -55,6 +55,9 @@ home_projects_text = "Most of my work is GNOME and Linux related and is written 
 home_about = "About Me"
 home_about_content = "/assets/about.md"
 
+home_support = "Support Me"
+home_support_text = "Every little donation is very much appreciated. I work on open source software and all my projects are available for free. So if you want to support my work, you can help me using the methods below."
+
 nav_contact = "Contact"
 nav_wiki = "Wiki"
 nav_support = "Support Me"
@@ -89,6 +92,9 @@ home_projects_text = "Většina mé práce se týká prostředí GNOME a Linuxu 
 
 home_about = "O mě"
 home_about_content = "/assets/about.cs.md"
+
+home_support = "Podpořit mě"
+home_support_text = "Každého malého příspěvku si velmi vážím. Pracuji na open source softwaru a všechny mé projekty jsou k dispozici zdarma. Pokud tedy chcete podpořit mou práci, můžete mi pomoci níže uvedenými způsoby."
 
 nav_contact = "Kontakt"
 nav_wiki = "Wiki"

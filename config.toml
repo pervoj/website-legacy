@@ -52,6 +52,9 @@ hero_socials = "Social Links"
 home_projects = "Projects"
 home_projects_text = "Most of my work is GNOME and Linux related and is written in Vala, JavaScript or Python. I love the vision of open source software, so all my projects are open source."
 
+home_about = "About Me"
+home_about_content = "/assets/about.md"
+
 nav_contact = "Contact"
 nav_wiki = "Wiki"
 nav_support = "Support Me"
@@ -59,7 +62,6 @@ nav_hire = "Hire Me"
 nav_toggle = "Toggle Menu"
 
 hp_title = "Simple apps built with passion"
-hp_description = "I'm <strong>Vojtěch Perník</strong>, a young programmer from Czechia, who likes to use a nickname <strong>pervoj</strong>. I can program in Vala, JavaScript, Python, Java and PHP. I love the vision of open source software and also all my projects are open source and can be found on GitLab. I also completely switched to Linux in 2020 and now I am using Fedora."
 hp_photo_alt = "photo"
 hp_shape_alt = "shape in background"
 
@@ -84,6 +86,9 @@ hero_socials = "Odkazy na sociální sítě"
 
 home_projects = "Projekty"
 home_projects_text = "Většina mé práce se týká prostředí GNOME a Linuxu a je napsána v jazyce Vala, JavaScript nebo Python. Mám rád vizi open source softwaru a také všechny mé projekty jsou open source."
+
+home_about = "O mě"
+home_about_content = "/assets/about.cs.md"
 
 nav_contact = "Kontakt"
 nav_wiki = "Wiki"

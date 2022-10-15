@@ -1,0 +1,135 @@
+[
+	{
+		"url": {
+			"en": "https://gitlab.gnome.org/pervoj/Refrain",
+			"cs": "https://gitlab.gnome.org/pervoj/Refrain"
+		},
+		"image": "/images/projects/refrain.svg",
+		"background": {
+			"from": "#f5c211",
+			"to": "#f5c211"
+		},
+		"name": {
+			"en": "Refrain",
+			"cs": "Refrén"
+		},
+		"description": {
+			"en": "Melody for a better mood",
+			"cs": "Melodie pro lepší náladu"
+		},
+		"links": {
+			"gitlab": "https://gitlab.gnome.org/pervoj/Refrain"
+		}
+	},
+	{
+		"url": {
+			"en": "https://gitlab.com/pervoj/bestseller",
+			"cs": "https://gitlab.com/pervoj/bestseller"
+		},
+		"image": "/images/projects/bestseller.svg",
+		"background": {
+			"from": "#e01b24",
+			"to": "#e01b24"
+		},
+		"name": {
+			"en": "Bestseller",
+			"cs": "Bestseller"
+		},
+		"description": {
+			"en": "Book Generator",
+			"cs": "Generátor knih"
+		},
+		"links": {
+			"gitlab": "https://gitlab.com/pervoj/bestseller"
+		}
+	},
+	{
+		"url": {
+			"en": "https://gitlab.gnome.org/pervoj/Pigeon",
+			"cs": "https://gitlab.gnome.org/pervoj/Pigeon"
+		},
+		"image": "/images/projects/pigeon.svg",
+		"background": {
+			"from": "#ff7800",
+			"to": "#c64600"
+		},
+		"name": {
+			"en": "Pigeon",
+			"cs": "Pigeon"
+		},
+		"description": {
+			"en": "Easily test your APIs",
+			"cs": "Snadné testování API"
+		},
+		"links": {
+			"gitlab": "https://gitlab.gnome.org/pervoj/Pigeon"
+		}
+	},
+	{
+		"url": {
+			"en": "https://gitlab.com/pervoj/fedoraconfig",
+			"cs": "https://gitlab.com/pervoj/fedoraconfig"
+		},
+		"image": "/images/projects/fedoraconfig.svg",
+		"background": {
+			"from": "#52a2da",
+			"to": "#52a2da"
+		},
+		"name": {
+			"en": "Fedora Config",
+			"cs": "Fedora Config"
+		},
+		"description": {
+			"en": "A script that takes Fedora from usable to comfortable",
+			"cs": "Skript, který přenese Fedoru z použitelné na pohodlnou"
+		},
+		"links": {
+			"gitlab": "https://gitlab.com/pervoj/fedoraconfig"
+		}
+	},
+	{
+		"url": {
+			"en": "https://gitlab.gnome.org/World/Blurble",
+			"cs": "https://gitlab.gnome.org/World/Blurble"
+		},
+		"image": "/images/projects/blurble.svg",
+		"background": {
+			"from": "#26a269",
+			"to": "#26a269"
+		},
+		"name": {
+			"en": "Blurble",
+			"cs": "Blurble"
+		},
+		"description": {
+			"en": "Word guessing game",
+			"cs": "Uhodněte tajenku"
+		},
+		"links": {
+			"gitlab": "https://gitlab.gnome.org/World/Blurble",
+			"flathub": "https://flathub.org/apps/details/app.drey.Blurble"
+		}
+	},
+	{
+		"url": {
+			"en": "https://gitlab.gnome.org/pervoj/Synchrony",
+			"cs": "https://gitlab.gnome.org/pervoj/Synchrony"
+		},
+		"image": "/images/projects/synchrony.svg",
+		"background": {
+			"from": "#3584e4",
+			"to": "#1a5fb4"
+		},
+		"name": {
+			"en": "Synchrony",
+			"cs": "Synchrony"
+		},
+		"description": {
+			"en": "Sync your clouds",
+			"cs": "Synchronizace cloudů"
+		},
+		"links": {
+			"gitlab": "https://gitlab.gnome.org/pervoj/Synchrony"
+		}
+	}
+]

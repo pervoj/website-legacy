@@ -25,7 +25,7 @@
 	{% include 'partials/navbar.html' %}
 </header>
 
-{% set image = page.extra.image | default(value = '/images/post-no-image.png') -%}
+{% set image = page.extra.image | default(value = '/images/adwaita-l.png') -%}
 
 <main id="main-content" class="container">
 	<img class="blog-post-image card" src="{{ get_url(path = image) }}" alt="">

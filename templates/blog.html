@@ -14,7 +14,7 @@
 	<section>
 		<div class="blog-list">
 			{% for post in section.pages -%}
-				{% set image = post.extra.image | default(value = '/images/post-no-image.png') -%}
+				{% set image = post.extra.image | default(value = '/images/adwaita-l.png') -%}
 				<article class="card activatable">
 					<img src="{{ get_url(path = image) }}" alt="">
 					<div>

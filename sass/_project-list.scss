@@ -1,0 +1,110 @@
+.project-list {
+	margin-block: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5em;
+	justify-items: center;
+
+	@media (max-width: 650px) {
+		grid-template-columns: 1fr;
+	}
+
+	li {
+		--bf: transparent;
+		--bt: transparent;
+
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		max-width: 320px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		isolation: isolate;
+
+		img {
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			object-fit: contain;
+			background-image: linear-gradient(to bottom, var(--bf), var(--bt));
+		}
+
+		> div {
+			flex-grow: 1;
+			padding: 0.8em 1em;
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+		}
+
+		h3 {
+			font-size: 1em;
+			margin: 0;
+		}
+
+		p {
+			font-size: 0.8em;
+			margin: 0;
+		}
+
+		.links {
+			font-size: 0.85em;
+			margin-block-start: auto;
+			padding-block-start: 0.2em;
+			display: flex;
+			gap: 0.4em;
+
+			a {
+				z-index: 2;
+			}
+
+			> * {
+				position: relative;
+				isolation: isolate;
+				padding: 0.4em;
+				border-radius: 50%;
+				color: var(--clr-accent);
+				opacity: 0.8;
+				transition: opacity 0.2s ease;
+
+				&::before {
+					content: "";
+					background-color: currentColor;
+					opacity: 0.2;
+					border-radius: inherit;
+					position: absolute;
+					inset: 0;
+					z-index: -1;
+				}
+
+				&:hover,
+				&:focus {
+					opacity: 1;
+				}
+			}
+
+			svg {
+				display: block;
+				width: 1em;
+
+				path {
+					fill: currentColor;
+				}
+			}
+		}
+
+		> a {
+			position: absolute;
+			inset: 0;
+			border-radius: inherit;
+			transition: outline 0.2s ease;
+			z-index: 1;
+
+			&:focus {
+				outline: var(--clr-focus) solid var(--btn-focus);
+				outline-offset: calc(var(--btn-focus) * -1);
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-{%- import "l10n.html" as l10n -%}
+{%- import 'l10n.html' as l10n -%}
 
 <!DOCTYPE html>
 <html lang="{{ lang }}">
@@ -11,25 +11,31 @@
 		<meta name="author" content="Vojtěch Perník" />
 		<meta
 			name="keywords"
-			content="Programming, FOSS, OSS, Open Source, Software, Linux, GNOME, GTK, Web Development"
+			content="{{ l10n::get(key = 'keywords') }}"
 		/>
 
 		{% block metatags -%}
-		<meta
-			property="og:title"
-			content="
-			{%- if page.title -%}
-				{{ page.title }} –
-			{%- elif section.title -%}
-				{{ section.title }} –
-			{%- endif %} pervoj"
-		/>
-		<meta
-			property="og:image"
-			content="{{ get_url(path='images/icon-512.png') }}"
-		/>
-		{%- endblock %} {% if lang == "en" -%} {%- set rss = "atom.xml" -%} {%-
-		else -%} {%- set rss = "cs/atom.xml" -%} {%- endif -%}
+			<meta
+				property="og:title"
+				content="
+				{%- if page.title -%}
+					{{ page.title }} –
+				{%- elif section.title -%}
+					{{ section.title }} –
+				{%- endif %} Vojtěch Perník"
+			/>
+			<!-- FIXME: og image -->
+			<meta
+				property="og:image"
+				content="{{ get_url(path = 'images/icon-512.png') }}"
+			/>
+		{%- endblock %}
+
+		{% if lang == "en" -%}
+			{%- set rss = "atom.xml" -%}
+		{%- else -%}
+			{%- set rss = "cs/atom.xml" -%}
+		{%- endif -%}
 		<link
 			rel="alternate"
 			type="application/atom+xml"
@@ -45,24 +51,26 @@
 			hreflang="cs"
 			href="{{ l10n::current_url(l = 'cs') }}"
 		/>
-		<link rel="manifest" href="{{ get_url(path='site.webmanifest') }}" />
-		<link rel="icon" href="{{ get_url(path='images/icon.svg') }}" />
-		<link
-			rel="stylesheet"
-			href="https://pervoj.gitlab.io/nuclear/nuclear.css"
-		/>
-		<link rel="stylesheet" href="{{ get_url(path='styles.css') }}" />
+		<link rel="manifest" href="{{ get_url(path = 'site.webmanifest') }}" />
+		<link rel="icon" type="image/svg+xml" href="{{ get_url(path = 'images/favicon.svg') }}" />
+		<link rel="icon" type="image/x-icon" href="{{ get_url(path = 'favicon.ico') }}" />
+		<link rel="stylesheet" href="{{ get_url(path = 'main.css') }}" />
 
-		<script src="https://pervoj.gitlab.io/nuclear/nuclear.js" async></script>
+		<script src="{{ get_url(path = 'main.js') }}" type="module"></script>
 
 		<title>
-			{%- if page.title -%} {{ page.title }} – {%- elif section.title -%}
-			{{ section.title }} – {%- endif %} pervoj
+			{%- if page.title -%}
+				{{ page.title }} –
+			{%- elif section.title -%}
+				{{ section.title }} –
+			{%- endif %} Vojtěch Perník
 		</title>
 	</head>
 	<body>
-		<a href="#main-content" class="skip-to-content">Skip to Content</a>
+		<a href="#main-content" class="skip-to-content">
+			{{ l10n::get(key = 'skip_to_content') }}
+		</a>
 
-		{% include "partials/navbar.html" %} {% block content %}{% endblock %}
+		{% block content %}{% endblock %}
 	</body>
 </html>

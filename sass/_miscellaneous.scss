@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+
+	font-size: 20px;
+	font-family: var(--font);
+	letter-spacing: -0.03em;
+	word-spacing: -0.03em;
+
+	background-color: var(--clr-bg-window);
+	color: var(--clr-fg-window);
+
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	margin-block: 2em;
+}
+
+.container {
+	margin-inline: auto;
+	max-width: 650px;
+	width: 85%;
+}
+
+.visually-hidden {
+	position: fixed;
+	inset-inline-start: 0;
+	inset-block-start: 0;
+	transform: translate(-200%, -200%);
+}
+
+.skip-to-content {
+	display: block;
+	position: fixed;
+	background-color: var(--clr-bg-headerbar);
+	color: var(--clr-fg-headerbar);
+	text-decoration: none;
+	border-radius: var(--btn-radius);
+	padding: 0.2em 0.6em;
+	box-shadow: var(--shadow);
+	margin: 0.8em 1.2em;
+	transform: translateY(-200%);
+	transition: transform 0.2s ease;
+
+	&:focus {
+		outline: var(--btn-focus) solid var(--clr-focus);
+		outline-offset: calc(-1 * var(--btn-focus));
+		transform: none;
+	}
+}
+
+.card {
+	background-color: var(--clr-bg-card);
+	color: var(--clr-fg-card);
+	box-shadow: var(--shadow);
+	border-radius: var(--card-radius);
+	padding: 0.8em 1em;
+	isolation: isolate;
+	position: relative;
+
+	&.activatable {
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-color: currentColor;
+			border-radius: inherit;
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+		}
+
+		&:hover::before {
+			opacity: 0.04;
+		}
+	}
+}
+
+.not-found {
+	flex-grow: 1;
+	display: grid;
+	place-content: center;
+	gap: 1em;
+	text-align: center;
+
+	* {
+		margin: 0;
+	}
+}

@@ -1,4 +1,4 @@
-Jmenuji se **Vojtěch Perník**, jsem patnáctiletý student z Českých Budějovic, kterého baví psát kód.
+Jmenuji se **Vojtěch Perník**, jsem šestnáctiletý student z Českých Budějovic, kterého baví psát kód.
 
 K programování jsem se dostal na začátku roku 2020, kdy jsem chtěl následovat cestu svého otce. Naučil jsem se Javu a moc mě to bavilo.
 

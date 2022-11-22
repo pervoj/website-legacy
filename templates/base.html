@@ -16,6 +16,8 @@
 			content="{{ l10n::get(key = 'keywords') }}"
 		/>
 
+		<link rel="manifest" href="{{ get_url(path = 'manifest.json') }}">
+
 		<meta property="og:site_name" content="pervoj">
 		{% block metatags -%}
 			<meta

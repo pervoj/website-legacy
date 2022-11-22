@@ -2,30 +2,35 @@ main {
 	h1 {
 		font-size: 2em;
 		font-weight: 300;
+		font-variation-settings: "wght" 300;
 		margin-block: 1.2em;
 	}
 
 	h2 {
 		font-size: 1.6em;
 		font-weight: 600;
+		font-variation-settings: "wght" 600;
 		margin-block: 2em 1em;
 	}
 
 	h3 {
 		font-size: 1.4em;
 		font-weight: 600;
+		font-variation-settings: "wght" 600;
 		margin-block: 2.4em 1.2em;
 	}
 
 	h4 {
 		font-size: 1.2em;
 		font-weight: 700;
+		font-variation-settings: "wght" 700;
 		margin-block: 3em 1.5em;
 	}
 
 	h5 {
 		font-size: 1em;
 		font-weight: 700;
+		font-variation-settings: "wght" 700;
 		text-transform: uppercase;
 		margin-block: 3.4em 1.6em;
 	}
@@ -33,6 +38,7 @@ main {
 	h6 {
 		font-size: 1em;
 		font-weight: 700;
+		font-variation-settings: "wght" 700;
 		margin-block: 3.4em 1.6em;
 	}
 
@@ -46,6 +52,7 @@ main {
 
 	strong, b {
 		font-weight: 700;
+		font-variation-settings: "wght" 700;
 	}
 
 	a {
@@ -123,6 +130,7 @@ main {
 	dl:not(.list-not-styled) {
 		dt {
 			font-weight: 700;
+			font-variation-settings: "wght" 700;
 		}
 
 		dd {

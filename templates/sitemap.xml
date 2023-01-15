@@ -1,7 +1,10 @@
 {%- import 'sitemap-macros.html' as m -%}
 
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
 	{%- for entry in entries -%}
 	{%- set url = entry.permalink | escape_xml | safe -%}
 	{%- if m::lang(url = url) == 'en' -%}

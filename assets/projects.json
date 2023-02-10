@@ -1,6 +1,28 @@
 [
 	{
 		"url": {
+			"en": "https://gitlab.com/pervoj/toboggan",
+			"cs": "https://gitlab.com/pervoj/toboggan"
+		},
+		"image": "/images/projects/toboggan.svg",
+		"background": {
+			"from": "#9141ac",
+			"to": "#9141ac"
+		},
+		"name": {
+			"en": "Toboggan",
+			"cs": "Tobogán"
+		},
+		"description": {
+			"en": "Slides generator",
+			"cs": "Generátor prezentací"
+		},
+		"links": {
+			"gitlab": "https://gitlab.com/pervoj/toboggan"
+		}
+	},
+	{
+		"url": {
 			"en": "https://gitlab.gnome.org/pervoj/Refrain",
 			"cs": "https://gitlab.gnome.org/pervoj/Refrain"
 		},
@@ -108,28 +130,6 @@
 		"links": {
 			"gitlab": "https://gitlab.gnome.org/World/Blurble",
 			"flathub": "https://flathub.org/apps/details/app.drey.Blurble"
-		}
-	},
-	{
-		"url": {
-			"en": "https://gitlab.gnome.org/pervoj/Synchrony",
-			"cs": "https://gitlab.gnome.org/pervoj/Synchrony"
-		},
-		"image": "/images/projects/synchrony.svg",
-		"background": {
-			"from": "#3584e4",
-			"to": "#1a5fb4"
-		},
-		"name": {
-			"en": "Synchrony",
-			"cs": "Synchrony"
-		},
-		"description": {
-			"en": "Sync your clouds",
-			"cs": "Synchronizace cloudů"
-		},
-		"links": {
-			"gitlab": "https://gitlab.gnome.org/pervoj/Synchrony"
 		}
 	}
 ]

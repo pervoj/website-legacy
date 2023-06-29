@@ -1,5 +1,0 @@
-{% set about = load_data(path = l10n::get(key = 'home_about_content')) %}
-
-<h2 id="about">{{ l10n::get(key = 'home_about') }}</h2>
-
-{{ about | markdown | safe }}

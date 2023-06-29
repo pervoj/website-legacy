@@ -1,0 +1,272 @@
+---
+import Icon from "../widgets/Icon.astro";
+import Content from "../../content/partials/projects.md";
+import config from "../../content/config/projects.json";
+
+type FrontMatter = {
+  title: string;
+  summary: string;
+  icon?: string;
+  banner: string;
+  links?: {
+    title: string;
+    icon: string;
+    url: string;
+  }[];
+  role?: "author" | "contributor";
+  tags?: {
+    title: string;
+    fg?: string;
+    bg?: string;
+    icon?: string;
+  }[];
+  website?: string;
+};
+
+const allProjects = await Astro.glob("../../content/projects/*");
+const getProject = (name: string) =>
+  allProjects.find((project) => {
+    const basename = (project.file as string).split("/").reverse()[0];
+    const extension = basename.split(".").reverse()[0];
+    return name == basename.replace(`.${extension}`, "");
+  });
+
+const projects = config.featured.map((_project) => {
+  const project = getProject(_project);
+  if (!project) throw Error(`Project '${_project}' was not found!`);
+  return {
+    ...(project!.frontmatter as FrontMatter),
+    slug: _project,
+    url: `/projects/${_project}`,
+  };
+});
+---
+
+<Content />
+<ul class="projects not-styled">
+  {
+    projects.map(async (project) => (
+      <li class="project card activatable">
+        <img class="banner" src={project.banner} alt="" />
+
+        <div>
+          <div class="content">
+            {project.icon && <img class="icon" src={project.icon} alt="" />}
+            <div>
+              <h3>{project.title}</h3>
+              <p>{project.summary}</p>
+            </div>
+          </div>
+
+          <ul class="links not-styled">
+            <li>
+              <span>
+                <Icon name="info" aria-hidden="true" />
+              </span>
+            </li>
+            {project.links &&
+              project.links.map((link) => (
+                <li>
+                  <a
+                    class="focus not-styled"
+                    title={link.title}
+                    aria-label={link.title}
+                    href={link.url}
+                  >
+                    <Icon name={link.icon} aria-hidden="true" />
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </div>
+
+        <ul class="tags not-styled" aria-hidden="true">
+          {project.role && (
+            <li style="--fg: var(--clr-fg-accent); --bg: var(--clr-bg-accent);">
+              <Icon name="person" aria-hidden="true" />
+              {project.role}
+            </li>
+          )}
+          {project.tags &&
+            project.tags.map((tag) => (
+              <li
+                style={[
+                  tag.fg && `--fg: ${tag.fg};`,
+                  tag.bg && `--bg: ${tag.bg};`,
+                ].join(" ")}
+              >
+                <Icon name={tag.icon ?? "tag"} aria-hidden="true" />
+                {tag.title}
+              </li>
+            ))}
+        </ul>
+
+        <a
+          class="focus inset not-styled"
+          href={project.website ?? project.url}
+          aria-label={project.title}
+          rel={project.website ? "" : "prefetch"}
+        />
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+  .projects {
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .project {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    isolation: isolate;
+    overflow: hidden;
+    line-height: 1;
+
+    * {
+      margin: 0;
+    }
+
+    > div {
+      display: grid;
+      gap: 0.5rem;
+      position: relative;
+      padding: 1rem;
+    }
+
+    > a {
+      display: block;
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      transition: outline var(--transition);
+      z-index: 1;
+    }
+  }
+
+  .banner {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    .icon {
+      width: 3rem;
+      aspect-ratio: 1;
+      border-radius: 0.4rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--clr-accent);
+
+    li > * {
+      display: block;
+      padding: 0.4rem;
+      position: relative;
+      border-radius: 50%;
+      color: inherit;
+      opacity: 0.8;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background-color: currentColor;
+        opacity: 0.2;
+      }
+
+      svg {
+        display: block;
+        height: 1em;
+        fill: currentColor;
+      }
+    }
+
+    a {
+      z-index: 2;
+      transition: opacity var(--transition), outline var(--transition);
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+
+  .tags {
+    position: absolute;
+    inset-inline-start: 1rem;
+    inset-block-start: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+
+    li {
+      --fg: var(--clr-fg-success);
+      --bg: var(--clr-bg-success);
+      display: flex;
+      align-items: center;
+      gap: 0.25ch;
+      padding: 0.25em 0.45em;
+      position: relative;
+      border-radius: 100vmax;
+      isolation: isolate;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      box-shadow: var(--shadow);
+      color: var(--fg);
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: inherit;
+        background-color: var(--bg);
+        opacity: 0.7;
+      }
+
+      svg {
+        display: block;
+        height: 1em;
+        fill: var(--fg);
+      }
+    }
+  }
+</style>

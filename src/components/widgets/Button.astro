@@ -1,0 +1,61 @@
+---
+const { link = false, fg, bg, style, className = "", ...props } = Astro.props;
+
+const styles = [fg && `--fg: ${fg};`, bg && `--bg: ${bg};`, style].join(" ");
+const classes = ["button", "focus", "offset", className].join(" ");
+---
+
+{
+  link ? (
+    <a style={styles} class={classes + " not-styled"} {...props}>
+      <slot />
+    </a>
+  ) : (
+    <button style={styles} class={classes} {...props}>
+      <slot />
+    </button>
+  )
+}
+
+<style lang="scss">
+  .button {
+    --fg: var(--clr-fg-accent);
+    --bg: var(--clr-bg-accent);
+
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    appearance: none;
+    min-height: var(--btn-height);
+    min-width: var(--btn-height);
+    padding-inline: 0.8em;
+    padding-block: 0.2em;
+    border: 0;
+    border-radius: var(--btn-radius);
+    background-color: var(--bg);
+    color: var(--fg);
+    font-size: 0.8rem;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: outline var(--transition);
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background-color: var(--fg);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        opacity: 0.08;
+      }
+    }
+  }
+</style>

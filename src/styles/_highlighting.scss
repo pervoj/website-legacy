@@ -1,0 +1,29 @@
+pre {
+  display: block;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding-block: 0.4rem;
+  padding-inline: 0.8rem;
+  font-size: 0.8rem;
+
+  code {
+    background-color: transparent;
+    color: inherit;
+    padding-inline: 0;
+    border-radius: 0;
+  }
+
+  &.astro-code {
+    --astro-code-color-text: var(--clr-fg-card);
+    --astro-code-color-background: var(--clr-bg-card);
+    --astro-code-token-constant: var(--clr-warning);
+    --astro-code-token-string: var(--clr-success);
+    --astro-code-token-comment: hsl(0, 0%, 50%);
+    --astro-code-token-keyword: var(--clr-destructive);
+    --astro-code-token-parameter: var(--astro-code-color-text);
+    --astro-code-token-function: var(--clr-accent);
+    --astro-code-token-string-expression: var(--astro-code-token-string);
+    --astro-code-token-punctuation: var(--astro-code-color-text);
+    --astro-code-token-link: var(--astro-code-color-text);
+  }
+}

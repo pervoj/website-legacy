@@ -1,0 +1,100 @@
+---
+import Icon from "../widgets/Icon.astro";
+
+const links: Link[] = [
+  {
+    title: "GitLab",
+    icon: "gitlab",
+    url: "https://gitlab.com/pervoj",
+  },
+  {
+    title: "GNOME GitLab",
+    icon: "gnome",
+    url: "https://gitlab.gnome.org/pervoj",
+  },
+  {
+    title: "E-Mail",
+    icon: "email",
+    url: "mailto:info@pervoj.cz",
+  },
+  {
+    title: "Matrix",
+    icon: "matrix",
+    url: "https://matrix.to/#/@pervoj:matrix.org",
+  },
+  {
+    title: "Mastodon",
+    icon: "mastodon",
+    url: "https://mastodon.social/@pervoj",
+  },
+  {
+    title: "Discord",
+    icon: "discord",
+    url: "https://discordapp.com/users/641536036169711617",
+  },
+];
+
+type Link = {
+  title: string;
+  icon: string;
+  url: string;
+  props?: {
+    [key: string]: string;
+  };
+};
+---
+
+<ul aria-label="Social Links">
+  {
+    links.map((link) => (
+      <li>
+        <a
+          class="focus"
+          title={link.title}
+          aria-label={link.title}
+          href={link.url}
+        >
+          <Icon name={link.icon} aria-hidden="true" />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+  ul {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  a {
+    display: block;
+    padding: 0.4rem;
+    position: relative;
+    border-radius: 50%;
+    color: inherit;
+    opacity: 0.8;
+    transition: opacity var(--transition), outline var(--transition);
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background-color: currentColor;
+      opacity: 0.2;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+  }
+</style>

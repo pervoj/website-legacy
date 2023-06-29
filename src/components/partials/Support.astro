@@ -1,0 +1,79 @@
+---
+import Button from "../widgets/Button.astro";
+import Content from "../../content/partials/support.md";
+import Icon from "../widgets/Icon.astro";
+
+const links: Link[] = [
+  {
+    title: "Liberapay",
+    icon: "liberapay",
+    url: "https://liberapay.com/pervoj",
+    fg: "var(--clr-fg-warning)",
+    bg: "var(--clr-bg-warning)",
+  },
+  {
+    title: "Ko-fi",
+    icon: "kofi",
+    url: "https://ko-fi.com/pervoj",
+    fg: "var(--clr-fg-destructive)",
+    bg: "var(--clr-bg-destructive)",
+  },
+  {
+    title: "PayPal",
+    icon: "paypal",
+    url: "https://paypal.me/pervoj",
+  },
+];
+
+type Link = {
+  title: string;
+  icon: string;
+  url: string;
+  fg?: string;
+  bg?: string;
+};
+---
+
+<Content />
+
+<ul class="not-styled">
+  {
+    links.map((link) => (
+      <li>
+        <Button
+          link={true}
+          href={link.url}
+          fg={link.fg}
+          bg={link.bg}
+          className="link"
+        >
+          <Icon name={link.icon} />
+          {link.title}
+        </Button>
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    * {
+      margin: 0;
+    }
+  }
+
+  .link {
+    font-weight: 600;
+    gap: 0.4em;
+
+    svg {
+      height: 1em;
+      fill: currentColor;
+    }
+  }
+</style>

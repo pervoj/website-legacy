@@ -1,0 +1,90 @@
+---
+import Icon from "../widgets/Icon.astro";
+
+const links: { [key: string]: Link } = {
+  home: { title: "Home", path: "/" },
+  blog: { title: "Blog", path: "/blog" },
+};
+
+type Link = {
+  title: string;
+  path: string;
+};
+
+export type Props = {
+  active?: string;
+};
+
+const { active } = Astro.props;
+---
+
+<nav class="container">
+  <a class="logo" href="/" rel="prefetch">
+    <Icon name="logo" aria-hidden="true" />
+    Vojtěch Perník
+  </a>
+  <ul>
+    {
+      Object.getOwnPropertyNames(links).map((linkId) => {
+        const link = links[linkId];
+        return (
+          <li>
+            <a
+              href={link.path}
+              class={active === linkId ? "active" : ""}
+              rel="prefetch"
+            >
+              {link.title}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<style lang="scss">
+  nav {
+    padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1ch;
+    line-height: 1;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .logo {
+    display: flex;
+    gap: 1ch;
+    align-items: center;
+    font-family: var(--font-accent);
+
+    svg {
+      display: block;
+      height: 1em;
+      fill: var(--clr-accent);
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1ch;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    a {
+      transition: color var(--transition);
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: var(--clr-accent);
+      }
+    }
+  }
+</style>

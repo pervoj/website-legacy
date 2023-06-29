@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/partials/Header.astro";
+import Footer from "../components/partials/Footer.astro";
+import Hero from "../components/partials/Hero.astro";
+import Projects from "../components/partials/Projects.astro";
+import About from "../content/partials/about.md";
+import Support from "../components/partials/Support.astro";
+---
+
+<Layout title="Home">
+  <Header active="home">
+    <Hero />
+  </Header>
+  <main class="container">
+    <Projects />
+    <About />
+    <Support />
+  </main>
+  <Footer />
+</Layout>

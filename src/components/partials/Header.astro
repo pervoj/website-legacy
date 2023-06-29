@@ -1,0 +1,22 @@
+---
+import Navbar from "./Navbar.astro";
+
+export type Props = {
+  active?: string;
+};
+
+const { active } = Astro.props;
+---
+
+<header>
+  <Navbar active={active} />
+  <slot />
+</header>
+
+<style lang="scss">
+  header {
+    background-color: var(--clr-bg-headerbar);
+    color: var(--clr-fg-headerbar);
+    border-block-end: 1px solid var(--clr-shade-headerbar);
+  }
+</style>

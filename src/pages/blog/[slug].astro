@@ -1,0 +1,59 @@
+---
+import Page from "../../layouts/Page.astro";
+import { getPosts } from "../../utils/posts.astro";
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const posts = await getPosts();
+const post = posts.find((post) => post.slug == slug)!;
+const Content = post.content;
+---
+
+<Page title={post.title}>
+  <img class="banner card" src={post.image} alt="" />
+  <header>
+    <h1>{post.title}</h1>
+    <time datetime={post.date.toISOString().split("T")[0]}>
+      {
+        post.date.toLocaleDateString("en", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        })
+      }
+    </time>
+    {post.summary && <p>{post.summary}</p>}
+  </header>
+  <Content />
+</Page>
+
+<style lang="scss">
+  .banner {
+    padding: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  header {
+    margin-block: 2.2rem;
+    display: grid;
+    gap: 1rem;
+
+    * {
+      margin: 0;
+    }
+
+    time {
+      font-size: 0.8rem;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+</style>

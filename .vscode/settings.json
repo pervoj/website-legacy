@@ -1,5 +1,10 @@
 {
-	"editor.formatOnSave": false,
-	"cSpell.language": "en,cs",
-	"svg.preview.background": "transparent"
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
 }

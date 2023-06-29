@@ -1,0 +1,53 @@
+---
+import Socials from "./Socials.astro";
+---
+
+<div class="container hero">
+  <div class="content">
+    <h1>
+      Simple apps <br />
+      built with passion
+    </h1>
+    <p>
+      I am a young developer from Czechia <br />
+      making projects that just work.
+    </p>
+    <Socials />
+  </div>
+  <picture aria-hidden="true">
+    <source
+      srcset="/images/illustration-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <img src="/images/illustration-light.svg" alt="" />
+  </picture>
+</div>
+
+<style lang="scss">
+  .hero {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block-start: 1rem;
+
+    @media (min-width: 600px) {
+      grid-template-columns: auto 1fr;
+      padding-block: 1.5rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+</style>

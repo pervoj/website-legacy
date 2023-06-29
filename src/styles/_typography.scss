@@ -1,0 +1,144 @@
+main {
+  * + * {
+    margin-block-start: 1em;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: var(--line-height-heading);
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: var(--line-height-heading);
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: var(--line-height-heading);
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: var(--line-height-heading);
+  }
+
+  h5 {
+    text-transform: uppercase;
+  }
+
+  h5,
+  h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: var(--line-height-heading);
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  a:not(.not-styled) {
+    position: relative;
+    isolation: isolate;
+    border-radius: var(--btn-radius);
+    color: var(--clr-accent);
+
+    text-decoration-line: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 0.1em;
+    transition: text-decoration-thickness var(--transition);
+
+    &:hover {
+      text-decoration-thickness: 0.2em;
+    }
+
+    &:focus {
+      text-decoration: none;
+      outline: var(--clr-focus) solid var(--btn-focus);
+      outline-offset: calc(var(--btn-focus) * 0.5);
+    }
+
+    &:active {
+      color: var(--clr-destructive);
+    }
+
+    &:visited {
+      color: var(--clr-link-visited);
+    }
+  }
+
+  hr {
+    margin-inline: -0.5rem;
+    border: none;
+    height: 0.1rem;
+    background-color: currentColor;
+    opacity: 0.6;
+  }
+
+  ol:not(.not-styled) {
+    list-style-type: decimal;
+    padding-inline-start: 2em;
+  }
+
+  ul:not(.not-styled) {
+    list-style-type: disc;
+    padding-inline-start: 2em;
+
+    ul {
+      list-style-type: circle;
+
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
+
+  :not(.not-styled):is(ol, ul) :is(ol, ul) li {
+    // every first item at more than the first level of immersion
+    margin-block-start: 1em;
+  }
+
+  dl:not(.not-styled) {
+    dt {
+      font-weight: 700;
+    }
+
+    dd {
+      padding-inline-start: 2em;
+    }
+  }
+
+  code {
+    background-color: var(--clr-btn);
+    color: var(--clr-destructive);
+    font-family: monospace;
+    padding-inline: 0.4ch;
+    border-radius: var(--btn-radius);
+  }
+
+  table:not(.not-styled) {
+    display: block;
+    border-collapse: collapse;
+    line-height: 1;
+    max-width: 100%;
+    overflow-x: auto;
+
+    td,
+    th {
+      padding: 0.4rem;
+      min-width: max-content;
+      border: 0.1rem solid var(--clr-btn-separator);
+    }
+
+    th {
+      background-color: var(--clr-bg-headerbar);
+      font-weight: 700;
+    }
+  }
+}

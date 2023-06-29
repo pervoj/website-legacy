@@ -1,0 +1,27 @@
+---
+type FrontMatter = {
+  title: string;
+  image: string;
+  summary?: string;
+};
+
+export async function getPosts() {
+  const posts = (await Astro.glob("../content/blog/*")).map((post) => {
+    const basename = (post.file as string).split("/").reverse()[0];
+    const date = basename.split("-").slice(0, 3).join("-");
+    const slug = basename // remove the date
+      .replace(`${date}-`, "") // remove the file extension
+      .replace(`.${basename.split(".").reverse()[0]}`, "");
+
+    return {
+      ...(post.frontmatter as FrontMatter),
+      slug,
+      date: new Date(date),
+      content: post.Content,
+    };
+  });
+  posts.sort((a, b) => a.date.getTime() - b.date.getTime());
+  posts.reverse();
+  return posts;
+}
+---

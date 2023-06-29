@@ -1,0 +1,42 @@
+---
+const date = new Date().toISOString().split("T")[0];
+---
+
+<footer>
+  <div class="container">
+    <p class="copyright">&copy; Vojtěch Perník</p>
+    <p class="metainfo">
+      {Astro.generator}
+      <time datetime={date}>{date}</time>
+    </p>
+  </div>
+</footer>
+
+<style lang="scss">
+  footer {
+    margin-block-start: auto;
+    background-color: var(--clr-bg-headerbar);
+    color: var(--clr-fg-headerbar);
+    border-block-start: 1px solid var(--clr-shade-headerbar);
+    padding-block: 0.5rem;
+    line-height: 1;
+  }
+
+  footer > div {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .metainfo {
+    display: grid;
+    gap: 0.2rem;
+    text-align: end;
+    font-size: 0.65rem;
+  }
+</style>

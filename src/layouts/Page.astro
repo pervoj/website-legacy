@@ -1,0 +1,20 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/partials/Header.astro";
+import Footer from "../components/partials/Footer.astro";
+
+export type Props = {
+  title?: string;
+  active?: string;
+};
+
+const { title, active } = Astro.props;
+---
+
+<Layout title={title}>
+  <Header active={active} />
+  <main class="container">
+    <slot />
+  </main>
+  <Footer />
+</Layout>

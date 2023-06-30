@@ -6,12 +6,13 @@ import Footer from "../components/partials/Footer.astro";
 export type Props = {
   title?: string;
   active?: string;
+  image?: string | URL;
 };
 
-const { title, active } = Astro.props;
+const { title, active, image } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout title={title} image={image}>
   <Header active={active} />
   <main class="container">
     <slot />

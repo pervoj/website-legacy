@@ -13,7 +13,7 @@ const post = posts.find((post) => post.slug == slug)!;
 const Content = post.content;
 ---
 
-<Page title={post.title}>
+<Page title={post.title} image={post.image}>
   <img class="banner card" src={post.image} alt="" />
   <header>
     <h1>{post.title}</h1>

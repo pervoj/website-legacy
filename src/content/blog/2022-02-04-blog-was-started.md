@@ -9,8 +9,6 @@ But all of that you can read on my home page. So now something about this blog.
 
 I decided to create this blog to write about what's going on in my projects and other things that I think are worth writing about.
 
-Whole blog is based on [Jekyll](https://jekyllrb.com/) and uses my own theme. In the nearest future I am also going to start my own wiki and redesign my home page to make everything look the same. Everything will be based on Jekyll.
-
 ---
 
 ## Page theme sample

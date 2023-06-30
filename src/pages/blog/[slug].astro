@@ -1,6 +1,6 @@
 ---
 import Page from "../../layouts/Page.astro";
-import { getPosts } from "../../utils/posts.astro";
+import getPosts from "../../utils/posts";
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const posts = await getPosts();
 const post = posts.find((post) => post.slug == slug)!;
-const Content = post.content;
+const Content = post.Content;
 ---
 
 <Page title={post.title} image={post.image}>

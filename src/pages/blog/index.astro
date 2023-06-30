@@ -1,12 +1,9 @@
 ---
 import Page from "../../layouts/Page.astro";
 import Content from "../../content/partials/blog.md";
-import { getPosts } from "../../utils/posts.astro";
+import getPosts from "../../utils/posts";
 
-const posts = await getPosts(); //.map((post) => ({
-//   ...post,
-//   date: post.date.toISOString().split("T")[0],
-// }));
+const posts = await getPosts();
 ---
 
 <Page title="Blog" active="blog">

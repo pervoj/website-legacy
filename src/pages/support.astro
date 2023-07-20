@@ -1,0 +1,102 @@
+---
+import Page from "../layouts/Page.astro";
+import Icon from "../components/widgets/Icon.astro";
+import { compiledContent } from "../content/partials/support.md";
+import links from "../utils/support";
+
+const content = compiledContent().replace("<h2", "<h1").replace("h2>", "h1>");
+---
+
+<Page title="Support Me">
+  <div set:html={content} />
+  <ul class="not-styled">
+    {
+      links.map((link) => (
+        <li
+          class="link card activatable"
+          style={`background-color: ${link.bg}; color: ${link.fg};`}
+        >
+          <Icon name={link.icon} aria-hidden="true" />
+          <h2>{link.title}</h2>
+          <p>{link.description}</p>
+
+          <a
+            class="focus inset not-styled"
+            href={link.url}
+            aria-label={link.title}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</Page>
+
+<style lang="scss">
+  ul {
+    display: grid;
+    gap: 1rem;
+    margin-block-start: 2rem;
+
+    * {
+      margin: 0;
+    }
+  }
+
+  .link {
+    --icon-size: 1.2rem;
+
+    display: grid;
+    grid-template-columns: var(--icon-size) 1fr;
+    align-items: center;
+    gap: 0.2rem;
+    isolation: isolate;
+
+    @media (min-width: 600px) {
+      --icon-size: 2rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background-image: linear-gradient(
+        20deg,
+        rgba(0, 0, 0, 0.2),
+        transparent,
+        rgba(255, 255, 255, 0.2)
+      );
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      grid-column: 1 / 3;
+
+      @media (min-width: 600px) {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
+
+    svg {
+      fill: currentColor;
+      margin-inline-end: 0.6rem;
+
+      @media (min-width: 600px) {
+        grid-row: 1 / 3;
+      }
+    }
+
+    a {
+      position: absolute;
+      display: block;
+      inset: 0;
+      border-radius: inherit;
+    }
+  }
+</style>

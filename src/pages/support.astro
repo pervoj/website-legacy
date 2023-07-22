@@ -46,7 +46,7 @@ const content = compiledContent().replace("<h2", "<h1").replace("h2>", "h1>");
     --icon-size: 1.2rem;
 
     display: grid;
-    grid-template-columns: var(--icon-size) 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 0.2rem;
     isolation: isolate;
@@ -85,6 +85,7 @@ const content = compiledContent().replace("<h2", "<h1").replace("h2>", "h1>");
 
     svg {
       fill: currentColor;
+      width: var(--icon-size);
       margin-inline-end: 0.6rem;
 
       @media (min-width: 600px) {

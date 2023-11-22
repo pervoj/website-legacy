@@ -1,6 +1,6 @@
 ## About Me
 
-My name is **Vojtěch Perník**, I'm a 16 years old student from the Czech Republic, who is passionate about code.
+My name is **Vojtěch Perník**, I'm a 17 years old student from the Czech Republic, who is passionate about code.
 
 I got into programming in early 2020 when I wanted to follow my father's journey. I learned Java and I enjoyed it very much.
 

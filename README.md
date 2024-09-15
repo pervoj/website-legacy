@@ -1,3 +1,7 @@
+> This repository is deprecated.
+
+---
+
 # Astro Starter Kit: Basics
 
 ```

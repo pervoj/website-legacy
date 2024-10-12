@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://pervoj.cz/",
+  site: "https://pervoj.gitlab.io/website-legacy/",
   outDir: "public",
   publicDir: "static",
   integrations: [mdx(), prefetch(), sitemap()],
